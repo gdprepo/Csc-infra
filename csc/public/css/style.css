@@ -186,3 +186,39 @@ footer{
 #footertxt {
     margin-top: 100px;
 }
+
+#colonne1{
+	width: 465px;
+	float: left;
+	margin-left: 5px;
+	padding-bottom:15px;
+ }
+ 
+#colonne1 article, #colonne2 article, #colonne3 article, #colonne4 article{
+	background: rgba(255,255,255,0.8);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+ 
+#colonne1 h3, #colonne2 h3, #colonne3 h3, #colonne4 h3{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: rgba(0,104,179,0.7);
+	color: white;
+	font-size: 20px;
+}
+
+#coordonnees{
+	float: left;
+	width: 465px;
+	float: left;
+	margin-left: 5px;
+	padding-bottom:15px;
+}
+ 
+#colonne2{
+	margin-left: 15px;
+	float: left;
+	width: 465px;
+	padding-bottom:15px;
+}

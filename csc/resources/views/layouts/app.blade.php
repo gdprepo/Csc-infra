@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +21,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/image.css') }}" rel="stylesheet">
+    
 </head>
 <body>
     <div id="app">
@@ -33,10 +35,10 @@
                 <div class="nav collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="container navbar-nav mr-auto">
                         <li class="nav-item btn_menu">
-                            <a class="nav-link active" href="{{ url('/') }}">Prestations <span class="sr-only">(current)</span><img src="{{asset('images/iconPrestation.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
+                            <a class="nav-link active" href="{{ route('prestations') }}">Prestations <span class="sr-only">(current)</span><img src="{{asset('images/iconPrestation.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
                         </li>
                         <li class="nav-item btn_menu">
-                            <a class="nav-link" href="{{ url('/') }}">Realisations <span class="sr-only">(current)</span><img src="{{asset('images/iconRealisation.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
+                            <a class="nav-link" href="{{ route('realisations') }}">Realisations <span class="sr-only">(current)</span><img src="{{asset('images/iconRealisation.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
                         </li>
                         <li style="z-index:1" class="nav-item logo">
                             <a class="nav-link" href="{{ url('/') }}"><img style="width: 100%" src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
@@ -79,6 +81,8 @@
             </div>
         </footer>
     </div>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
