@@ -1,60 +1,86 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
+@section('content')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="{{asset('css/style.css')}}" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                    @auth
-                        <a class="nav-link" href="{{ url('/home') }}">Home <span class="sr-only">(current)</span></a>
-                    @else
-                        <div class="top-right links">    
-                            <a href="{{ route('login') }}">Login</a>
-
-                            @if (Route::has('register'))
-                                <a  href="{{ route('register') }}">Register</a>
-                            @endif
-                        </div>                 
-                    @endauth
-                    </li>
-
-                </ul>
-        </div>
-        </nav>
-        <div class="flex-center position-ref full-height">
-    
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+        <div style="z-index: 0" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-interval="5000">
+                    <img src="{{asset('images/slider.jpg')}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div style="background-color:#007bff87">
+                            <h5>CSC Morandini</h5>
+                            <p>Un plombier chauffagiste qui trouve toutes les solutions à vos besoins</p>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="carousel-item" data-interval="5000">
+                    <img src="{{asset('images/slider2.jpg')}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div style="background-color:#007bff87">
+                            <h5>CSC Morandini - Une intervention rapide pour particuliers et professionnels</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" data-interval="5000">
+                    <img src="{{asset('images/slider3.jpg')}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div style="background-color:#007bff87">
+                            <h5>CSC Morandini - Une équipe dynamique & qualifiée à votre écoute</h5>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
+        <div class="container">
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    </body>
-</html>
+            <div class="container" style="margin-bottom:100px; margin-top:50px" id="contenu">
+                <br>
+                <h2>Bienvenue à l'entreprise Morandini<br><span style="font-size:25px;">à Périgny en Charente-Maritime</span></h2>
+                <br>
+                
+                <p>Nous sommes spécialisés dans la plomberie et le chauffage depuis plus de 9 ans.
+                <br><br>
+
+                Nous effectuons les travaux de chauffage au gaz et électrique. Nous installons le chauffage en neuf et rénovation. Nous posons une pompe à chaleur adaptée à votre bâtiment. Nos professionnels sont qualifiés et vous apportent des travaux de qualité.
+                <br><br>
+                    
+                Nous effectuons la conception de votre salle de bains sur-mesure. Nous réalisons les travaux de tuyauterie et de canalisation. Nous sommes à votre service pour une étude personnalisée de votre plomberie. Nous intervenons pour les particuliers et les professionnels selon vos demandes en plomberie.
+                <br><br>
+
+                L'entreprise Morandini intervient pour la plomberie et le chauffage dans un rayon de 15 km autour de Périgny et dans les environs de La Rochelle, Dompierre-sur-Mer, Angoulins, Châtelaillon-Plage, Nieul-sur-Mer, Lagord et Saint Médard d'Aunis.
+                <br><br>
+
+                Alors pour tous vos travaux de plomberie et de chauffage, contactez l'entreprise Morandini pour de plus amples renseignements.</p><br>
+                
+                
+                <h3>Morandini, c'est avant tout votre plombier chauffagiste qui trouve toutes les solutions à vos besoins.</h3>
+                <br><br>
+            </div>
+
+            <div class="container" id="contenu3" style="margin-bottom:100px; margin-top: -50px ;background: rgba(255,255,255,0.8);">
+			    <br>
+				<h2>Historique</h2>
+				<br>
+				<p><b>Du 15/06/2004 au 31/12/2007</b> - Activité en tant qu'entreprise Artisanale<br>
+				<b>Au 01/01/2008</b> - Création de la Sarl CSC MORANDINI au capital 51 000 €<br>
+				<b>Au 01/04/2013</b> - Augmentation du capital à 102 000 €</p>
+				<br><br>
+			</div>
+
+        </div>
+
+@endsection
