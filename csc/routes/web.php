@@ -22,4 +22,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/prestations', 'PageController@prestations')->name('prestations');
 Route::get('/realisations', 'PageController@realisations')->name('realisations');
+Route::get('/showrooms', 'PageController@showrooms')->name('showrooms');
+Route::get('/contact', 'PageController@contact')->name('contact');
+
+Route::get('/contact/mail', 'ContactController@mail')->name('contact.mail');
+
+
+
 

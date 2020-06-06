@@ -15,4 +15,14 @@ class PageController extends Controller
     {
         return view('/pages/realisations');
     }
+
+    public function showrooms()
+    {
+        return view('/pages/showrooms');
+    }
+
+    public function contact()
+    {
+        return view('/pages/contact');
+    }
 }
