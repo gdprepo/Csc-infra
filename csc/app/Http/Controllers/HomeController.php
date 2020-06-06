@@ -26,14 +26,6 @@ class HomeController extends Controller
         return view('home');
     }
 
-    public function prestations()
-    {
-        return view('/pages/prestations');
-    }
 
-    public function realisations()
-    {
-        return view('/pages/realisations');
-    }
 
 }

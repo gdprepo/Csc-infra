@@ -55,7 +55,7 @@
                     
                     <br><br>
                     <h3 style="text-align:left;">Pose d'une salle de bain chez un particulier</h3>
-                    <div class="row">
+                    <div style="margin:5px" class="row">
                         <div class="col-sm-4">		
                             <img id="myImg1" src="{{ asset('images/gallerie/1_001g.jpg')}}" alt="" style="padding: 10px 10px 10px 0px; width: 100%">
                         </div>
@@ -80,86 +80,128 @@
                     <br><br>
                     
                     <h3 style="text-align:left;">Plomberie</h3>
-                    <p style="text-align:left;">			
-                        <img  id="myImg6" src="{{ asset('images/gallerie/2_001g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-
-                        <img  id="myImg7" src="{{ asset('images/gallerie/2_007g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-                        
-                        <img  id="myImg8" src="{{ asset('images/gallerie/2_003g.jpg')}}"alt="" style="padding: 10px 0px 10px 0px;"></a>
+                    <div style="margin:5px" class="row">
+                        <div class="col-sm-4">
+                            <img  id="myImg6" src="{{ asset('images/gallerie/2_001g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-4">
+                            <img  id="myImg7" src="{{ asset('images/gallerie/2_007g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-4">                        
+                            <img  id="myImg8" src="{{ asset('images/gallerie/2_003g.jpg')}}"alt="" style="padding: 10px 0px 10px 0px; width: 100%"></a>
+                        </div>
 
                         <!-------->
-                        
-                        <img  id="myImg9" src="{{ asset('images/gallerie/2_004g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-                        
-                        <img  id="myImg10" src="{{ asset('images/gallerie/2_005g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-                        
-                        <img  id="myImg11" src="{{ asset('images/gallerie/2_006g.jpg')}}"alt="" style="padding: 10px 0px 10px 0px;"></a>
-                    </p>
+                        <div class="col-sm-4">
+                            <img  id="myImg9" src="{{ asset('images/gallerie/2_004g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-4">
+                            <img  id="myImg10" src="{{ asset('images/gallerie/2_005g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-4">
+                            <img  id="myImg11" src="{{ asset('images/gallerie/2_006g.jpg')}}"alt="" style="padding: 10px 0px 10px 0px; width: 100%"></a>
+                        </div>
+
+                    </div>
                     
                     <br><br>
                     
                     <h3 style="text-align:left;">Pose d'une douche avant / après : Maintien à domicile</h3>
                     <h3 style="text-align:left; color:#0068b3;">AVANT</h3>
-                    <p style="text-align:justify;">			
-                        <img  id="myImg12" src="{{ asset('images/gallerie/3_001g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-
-                        <img  id="myImg13" src="{{ asset('images/gallerie/3_002g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
+                    <div style="margin:5px" class="row">
+                        <div class="col-sm-3">
+                            <img  id="myImg12" src="{{ asset('images/gallerie/3_001g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
                         
-                        <img  id="myImg14" src="{{ asset('images/gallerie/3_003g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
+                        <div class="col-sm-3">
+                            <img  id="myImg16" src="{{ asset('images/gallerie/3_005g.jpg')}}"alt="" style="padding: 10px 29px 10px 0px; width: 100%"></a>
+                        </div>
                         
-                        <img  id="myImg15" src="{{ asset('images/gallerie/3_004g.jpg')}}"alt="" style="padding: 10px 0px 10px 0px;"></a>
+                        <div class="col-sm-3">
+                            <img  id="myImg14" src="{{ asset('images/gallerie/3_003g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <img  id="myImg18" src="{{ asset('images/gallerie/3_007g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
                         
                         <!-------->
-                        
-                        <img  id="myImg16" src="{{ asset('images/gallerie/3_005g.jpg')}}"alt="" style="padding: 10px 29px 10px 0px;"></a>
-                        
-                        <img  id="myImg17" src="{{ asset('images/gallerie/3_006g.jpg')}}"alt="" style="padding: 10px 29px 10px 0px;"></a>
-                        
-                        <img  id="myImg18" src="{{ asset('images/gallerie/3_007g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-                    </p>
+                        <div class="col-sm-4">
+                            <img  id="myImg13" src="{{ asset('images/gallerie/3_002g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img  id="myImg17" src="{{ asset('images/gallerie/3_006g.jpg')}}"alt="" style="padding: 10px 29px 10px 0px; width: 100%"></a>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <img  id="myImg15" src="{{ asset('images/gallerie/3_004g.jpg')}}"alt="" style="padding: 10px 0px 10px 0px; width: 100%"></a>
+
+                        </div>
+
+                    </div>
                     
                     <br>
                     <h3 style="text-align:left; color:#0068b3;">APRÈS</h3>
-                    <p style="text-align:justify;">			
-                        <img  id="myImg19" src="{{ asset('images/gallerie/3_008g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
+                    <div style="margin:5px" class="row">
+                        <div class="col-sm-6">
+                            <img  id="myImg19" src="{{ asset('images/gallerie/3_008g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-6">
+                            <img  id="myImg20" src="{{ asset('images/gallerie/3_009g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
 
-                        <img  id="myImg20" src="{{ asset('images/gallerie/3_009g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-                    </p>
+                    </div>
 
                     <br><br>
                     
                     <h3 style="text-align:left;">Restauration d'une salle de bain avant/après : Label HSS (Habitation Sénior Services)</h3>
                     <h3 style="text-align:left; color:#0068b3;">AVANT</h3>
-                    <p style="text-align:justify;">			
-                        <img  id="myImg21" src="{{ asset('images/gallerie/4_001g.jpg')}}" alt="" style="padding: 10px 10px 10px 0px;"></a>
-
-                        <img  id="myImg22" src="{{ asset('images/gallerie/4_002g.jpg')}}" alt="" style="padding: 10px 10px 10px 0px;"></a>
-                        
-                        <img  id="myImg23" src="{{ asset('images/gallerie/4_003g.jpg')}}" alt="" style="padding: 10px 0px 10px 0px;"></a>
-                        
-                        <!---------->
-                        
-                        <img  id="myImg24" src="{{ asset('images/gallerie/4_004g.jpg')}}" alt="" style="padding: 10px 10px 10px 0px;"></a>
-                        
-                        
-                        <img  id="myImg25" src="{{ asset('images/gallerie/4_007g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
-
-                        
-                    </p>
+                    <div style="margin:5px" class="row">
+                        <div class="col-sm-4">
+                            <img  id="myImg21" src="{{ asset('images/gallerie/4_001g.jpg')}}" alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-4">
+                            <img id="myImg22" src="{{ asset('images/gallerie/4_002g.jpg')}}" alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-4">
+                            <img  id="myImg23" src="{{ asset('images/gallerie/4_003g.jpg')}}" alt="" style="padding: 10px 0px 10px 0px; width: 100%"></a>
+                        </div>
                         
                         <!---------->
-                        <br>
-                        <h3 style="text-align:left; color:#0068b3;">APRÈS</h3>
-                    <p style="text-align:justify;">
-                        <img  id="myImg26" src="{{ asset('images/gallerie/4_009g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
+                        <div class="col-sm-6">
+                            <img  id="myImg24" src="{{ asset('images/gallerie/4_004g.jpg')}}" alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                            <img  id="myImg25" src="{{ asset('images/gallerie/4_007g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
 
-                        <img  id="myImg27" src="{{ asset('images/gallerie/4_010g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
                         
-                        <img  id="myImg28" src="{{ asset('images/gallerie/4_011g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
+                    </div>
                         
-                        <img  id="myImg29" src="{{ asset('images/gallerie/4_012g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px;"></a>
+                        <!---------->
+                    <br>
+                    <h3 style="text-align:left; color:#0068b3;">APRÈS</h3>
+                    <div style="margin:5px" class="row">
+                        <div class="col-sm-3">
+                            <img  id="myImg26" src="{{ asset('images/gallerie/4_009g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        <div class="col-sm-3">
+                            <img  id="myImg27" src="{{ asset('images/gallerie/4_010g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <img  id="myImg28" src="{{ asset('images/gallerie/4_011g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <img  id="myImg29" src="{{ asset('images/gallerie/4_012g.jpg')}}"alt="" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                        </div>
+                        
                         <br><br>
-                    </p>
+                    </div>
 
 
                         <!-- The Modal -->
