@@ -36,12 +36,14 @@
               <li class="nav-item active">
                 <a class="nav-link" href="{{ route('home') }}">Profil <span class="sr-only">(current)</span></a>
               </li>
+              @if (Auth::user()->groupe == "sousadmin")
               <li class="nav-item">
-                <a class="nav-link" href="#">Creer un compte client</a>
+                <a class="nav-link" href="{{ route('client.add') }}">Creer un compte client</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('client.list') }}">Liste clients</a>
               </li>
+              @endif
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('deconnection') }}">Se deconnecter</a>
               </li>

@@ -22,6 +22,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/dashboard/edit', 'HomeController@edit')->name('profile.edit');
 Route::get('/dashboard/client/list', 'HomeController@clientlist')->name('client.list');
+Route::get('/dashboard/client/add', 'HomeController@clientadd')->name('client.add');
+Route::post('/dashboard/client/add', 'UserController@createclient')->name('client.create');
+
+
 Route::get('/dashboard/client/{id}', 'HomeController@clientshow')->name('client.show');
 Route::get('/dashboard/logout', 'HomeController@deconnection')->name('deconnection');
 

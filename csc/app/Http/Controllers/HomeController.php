@@ -42,6 +42,11 @@ class HomeController extends Controller
         return view('dashboard.listClient', ['users' => $users]);
     }
 
+    public function clientadd()
+    {
+        return view('dashboard.createClient');
+    }
+
     public function clientshow($id)
     {
         $user = User::find($id);
