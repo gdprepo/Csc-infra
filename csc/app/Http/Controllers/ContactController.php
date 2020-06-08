@@ -9,8 +9,6 @@ class ContactController extends Controller
     function mail(Request $request)
     {
 
-
-
         $to      = "gabindepaire@gmail.com";
         $subject = "this is a test";
         $message = "Bonjour !";

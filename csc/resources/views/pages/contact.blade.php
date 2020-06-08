@@ -96,7 +96,7 @@
 
 
 
-                <div class="formcontact">
+                <!-- <div class="formcontact">
                     <form methode="POST" action="{{ route('contact.mail') }}">
                     @csrf
                         <label for="fname">First Name</label>
@@ -111,7 +111,7 @@
                         <input type="submit" value="Submit">
 
                     </form>
-                </div>
+                </div> -->
 
 
 

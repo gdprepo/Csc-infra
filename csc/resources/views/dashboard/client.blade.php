@@ -19,16 +19,6 @@
                         <li>Groupe : {{ $user->groupe }}  </li>
                     
                     </ul>
-    
-    
-    
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
                 </div>
 
             </div>
@@ -42,6 +32,8 @@
                     <li>fixe : 0665258674  </li>
                 
                 </ul>
+
+                <button style="width: 30%" type="button" class="btn btn-primary">Creer un bon d'intervention</button>
             
             
             </div>

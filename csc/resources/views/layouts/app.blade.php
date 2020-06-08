@@ -76,7 +76,8 @@
         </main>
         <footer>
             <div id="footertxt">
-                <p><a target="_blank" href="http://www.webcake.fr">Création</a> / <a target="_blank" href="http://www.pluscom.fr">&nbsp;&nbsp;&nbsp;PlusCom&nbsp;&nbsp;&nbsp;</a>  
+                <p><a target="_blank" href="http://www.webcake.fr">Création</a> 
+                / <a target="_blank" href="{{ route('home') }}">&nbsp;&nbsp;&nbsp;Infra&nbsp;&nbsp;&nbsp;</a>  
                 / <a target="_blank" href="http://www.a2mi-informatique.fr">&nbsp;&nbsp;&nbsp;A2MI</a>
                 <br><br>
                 <a href="plombier-chauffagiste-la-rochelle-mentions-legales.html">Mentions légales</a></p>

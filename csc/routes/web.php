@@ -20,6 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/dashboard/edit', 'HomeController@edit')->name('profile.edit');
+Route::get('/dashboard/client/list', 'HomeController@clientlist')->name('client.list');
+Route::get('/dashboard/client/{id}', 'HomeController@clientshow')->name('client.show');
+
 Route::get('/prestations', 'PageController@prestations')->name('prestations');
 Route::get('/realisations', 'PageController@realisations')->name('realisations');
 Route::get('/showrooms', 'PageController@showrooms')->name('showrooms');
