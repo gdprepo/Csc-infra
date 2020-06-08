@@ -26,6 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = User::find(Auth::id());
+        
         return view('home', ['user' => $user]);
     }
 
@@ -45,6 +46,13 @@ class HomeController extends Controller
     {
         $user = User::find($id);
         return view('dashboard.client', ['user' => $user]);
+    }
+
+    public function deconnection()
+    {
+        Auth::logout();
+
+        return redirect('/login');
     }
 
 }

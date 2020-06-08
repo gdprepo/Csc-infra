@@ -42,6 +42,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('client.list') }}">Liste clients</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('deconnection') }}">Se deconnecter</a>
+              </li>
             </ul>
           </div>
         </nav>
