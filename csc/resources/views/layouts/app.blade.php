@@ -29,7 +29,6 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #36363685; height: 150px">
-                <a style="color:white" class="navbar-brand" href="{{ url('/') }}">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -51,22 +50,6 @@
                         <li class="nav-item btn_menu">
                             <a class="nav-link" href="{{ route('contact') }}">Contact <span class="sr-only">(current)</span><img src="{{asset('images/iconContact.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
                         </li>
-
-
-                        <li class="top-right nav-item" style="margin:1%">
-                        @auth
-                            <a class="nav-link" href="{{ url('/home') }}">Profile <span class="sr-only">(current)</span></a>
-                        @else
-                            <div class="top-right links">    
-                                <a href="{{ route('login') }}">Login</a>
-
-                                @if (Route::has('register'))
-                                    <a  href="{{ route('register') }}">Register</a>
-                                @endif
-                            </div>                 
-                        @endauth
-                        </li>
-
                     </ul>
                 </div>
             </nav>
