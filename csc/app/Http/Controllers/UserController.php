@@ -28,7 +28,9 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('/home');
+        session()->flash('createClient', 'Profil Client créé !');
+
+        return redirect()->route('home');
 
     }
 }

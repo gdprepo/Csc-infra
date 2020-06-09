@@ -10,7 +10,7 @@
                 
                 <div class="card-body">
                     <h3> Entrer les informations </h3>
-    
+                
                     <form method="POST" action="{{ route('client.create') }}">
                     @csrf
                         <div class="form-group">

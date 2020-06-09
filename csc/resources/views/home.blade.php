@@ -3,8 +3,19 @@
 @section('content')
 
 <div style="margin-top: 100px" class="container">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
+
+            <div class="container">
+                @if(session()->has('createClient'))
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong>Notification : </strong> {{ session()->get('createClient') }} 
+                    </div>
+                @endif
+            </div>
+
             <div class="card">
                 <div class="card-header" style="text-transform : uppercase; text-align:center">Profil de {{ $user->prenom }} {{ $user->nom }}</div>
                 
