@@ -23,7 +23,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/dashboard/edit', 'HomeController@edit')->name('profile.edit');
 Route::get('/dashboard/client/list', 'HomeController@clientlist')->name('client.list');
 Route::get('/dashboard/client/add', 'HomeController@clientadd')->name('client.add');
+Route::get('/dashboard/client/password', 'HomeController@clientpassword')->name('client.password');
+Route::get('/dashboard/site', 'HomeController@site')->name('site');
+
+
 Route::post('/dashboard/client/add', 'UserController@createclient')->name('client.create');
+Route::post('/dashboard/client/password/upd', 'UserController@updPassword')->name('client.setpssw');
+
 
 
 Route::get('/dashboard/client/{id}', 'HomeController@clientshow')->name('client.show');

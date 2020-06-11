@@ -26,12 +26,14 @@
                         <li>Prénom : {{ $user->prenom }}  </li>
                         <li>Nom : {{ $user->nom }}  </li>
                         <li>Adresse : {{ $user->adresse }}  </li>
-                        <li>Mobile : {{ $user->mobile }}  </li>
                         <li>Groupe : {{ $user->groupe }}  </li>
+                        <li>Groupe : {{ $user->email }}  </li>
+                        <li>Mobile : {{ $user->mobile }}  </li>
                     
                     </ul>
-    
-                    <button style="width: 33%" type="button" class="btn btn-primary">Modifier le mot de passe</button>
+                    <a href="{{ route('client.password') }}">
+                        <button style="width: 33%" type="button" class="btn btn-primary">Modifier le mot de passe</button>
+                    </a>
                     @if ($user->groupe == "client")
                         <button style="width: 33%" type="button" class="btn btn-primary">Nous contacter</button>
                         <button style="width: 30%" type="button" class="btn btn-primary">PDF complet</button>

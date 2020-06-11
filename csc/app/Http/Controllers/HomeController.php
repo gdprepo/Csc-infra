@@ -53,6 +53,16 @@ class HomeController extends Controller
         return view('dashboard.client', ['user' => $user]);
     }
 
+    public function clientpassword()
+    {
+        return view('dashboard.passwordClient');
+    }
+
+    public function site()
+    {
+        return view('dashboard.site.index');
+    }
+
     public function deconnection()
     {
         Auth::logout();

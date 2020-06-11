@@ -50,8 +50,8 @@
             <div class="container" style="margin-bottom:100px; margin-top:50px" id="contenu">
                 <br>
                 <h2>Bienvenue à l'entreprise Morandini<br><span style="font-size:25px;">à Périgny en Charente-Maritime</span></h2>
+
                 <br>
-                
                 <p>Nous sommes spécialisés dans la plomberie et le chauffage depuis plus de 9 ans.
                 <br><br>
 
