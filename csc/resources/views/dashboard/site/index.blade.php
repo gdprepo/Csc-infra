@@ -2,6 +2,14 @@
 
 @section('content')
 
+<select id="globalstyleselect" class="custom-select custom-select-lg mb-3">
+    <option selected>Choisir une partie a modifier</option>
+    <option value="1">Welcome</option>
+    <option value="2">Historique</option>
+    <option value="3">Three</option>
+</select>
+
+
 <div style="margin-top:50px; margin-bottom:-50px" class="container">
     @if(session()->has('textUpd'))
         <div class="alert alert-success">
@@ -12,7 +20,7 @@
 </div>
 
 
-<form method="POST" action="{{ route('welcome.upd', $welcome->id) }}">
+<form class="1 box" style="display: none" method="POST" action="{{ route('welcome.upd', $welcome->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3>Bienvenue à l'entreprise Morandini</h3>
@@ -21,7 +29,7 @@
     </div>
 </form>
 
-<form method="POST" action="{{ route('welcome.upd', $historique->id) }}">
+<form class="2 box" style="display: none" method="POST" action="{{ route('welcome.upd', $historique->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3>Historique</h3>
