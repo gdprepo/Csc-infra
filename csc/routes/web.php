@@ -14,8 +14,10 @@ use App\Texte;
 */
 
 Route::get('/', function () {
-    $text = Texte::find(1);
-    return view('welcome', ['text' => $text]);
+    $welcome = Texte::find(1);
+    $historique = Texte::find(2);
+
+    return view('welcome', ['welcome' => $welcome], ['historique' => $historique]);
 });
 
 Auth::routes();
@@ -25,7 +27,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/dashboard/client/list', 'HomeController@clientlist')->name('client.list');
 Route::get('/dashboard/client/add', 'HomeController@clientadd')->name('client.add');
 Route::get('/dashboard/client/password', 'HomeController@clientpassword')->name('client.password');
+
 Route::get('/dashboard/site', 'HomeController@site')->name('site');
+Route::post('/dashboard/site/welcome/upd/{id}', 'TexteController@welcome')->name('welcome.upd');
+//Route::post('/dashboard/site/historique/upd', 'TexteController@historique')->name('historique.upd');
+
 
 
 Route::post('/dashboard/client/add', 'UserController@createclient')->name('client.create');

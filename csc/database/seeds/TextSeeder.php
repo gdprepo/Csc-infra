@@ -33,5 +33,15 @@ class TextSeeder extends Seeder
             <br><br>",
 
         ]);
+
+        DB::table('textes')->insert([
+            'title' => "Historique",
+            'texte' => "
+            <br>
+            <p><b>Du 15/06/2004 au 31/12/2007</b> - Activité en tant qu'entreprise Artisanale<br>
+            <b>Au 01/01/2008</b> - Création de la Sarl CSC MORANDINI au capital 51 000 €<br>
+            <b>Au 01/04/2013</b> - Augmentation du capital à 102 000 €</p>
+            <br><br>",
+        ]);
     }
 }

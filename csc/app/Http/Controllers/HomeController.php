@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\Texte;
 
 class HomeController extends Controller
 {
@@ -60,7 +61,10 @@ class HomeController extends Controller
 
     public function site()
     {
-        return view('dashboard.site.index');
+        $welcome = Texte::find(1);
+        $historique = Texte::find(2);
+
+        return view('dashboard.site.index', ['welcome' => $welcome], ['historique' => $historique]);
     }
 
     public function deconnection()

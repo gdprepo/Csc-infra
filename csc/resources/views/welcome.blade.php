@@ -51,17 +51,14 @@
                 <br>
                 <h2>Bienvenue à l'entreprise Morandini<br><span style="font-size:25px;">à Périgny en Charente-Maritime</span></h2>
 
-                {!! $text->texte !!}
+                {!! $welcome->texte !!}
             </div>
 
             <div class="container" id="contenu3" style="margin-bottom:100px; margin-top: -50px ;background: rgba(255,255,255,0.8);">
-			    <br>
-				<h2>Historique</h2>
-				<br>
-				<p><b>Du 15/06/2004 au 31/12/2007</b> - Activité en tant qu'entreprise Artisanale<br>
-				<b>Au 01/01/2008</b> - Création de la Sarl CSC MORANDINI au capital 51 000 €<br>
-				<b>Au 01/04/2013</b> - Augmentation du capital à 102 000 €</p>
-				<br><br>
+                <br>
+                <h2>Historique</h2>
+
+                {!! $historique->texte !!}
 			</div>
 
         </div>
