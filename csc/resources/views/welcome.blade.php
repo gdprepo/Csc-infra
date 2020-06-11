@@ -51,24 +51,7 @@
                 <br>
                 <h2>Bienvenue à l'entreprise Morandini<br><span style="font-size:25px;">à Périgny en Charente-Maritime</span></h2>
 
-                <br>
-                <p>Nous sommes spécialisés dans la plomberie et le chauffage depuis plus de 9 ans.
-                <br><br>
-
-                Nous effectuons les travaux de chauffage au gaz et électrique. Nous installons le chauffage en neuf et rénovation. Nous posons une pompe à chaleur adaptée à votre bâtiment. Nos professionnels sont qualifiés et vous apportent des travaux de qualité.
-                <br><br>
-                    
-                Nous effectuons la conception de votre salle de bains sur-mesure. Nous réalisons les travaux de tuyauterie et de canalisation. Nous sommes à votre service pour une étude personnalisée de votre plomberie. Nous intervenons pour les particuliers et les professionnels selon vos demandes en plomberie.
-                <br><br>
-
-                L'entreprise Morandini intervient pour la plomberie et le chauffage dans un rayon de 15 km autour de Périgny et dans les environs de La Rochelle, Dompierre-sur-Mer, Angoulins, Châtelaillon-Plage, Nieul-sur-Mer, Lagord et Saint Médard d'Aunis.
-                <br><br>
-
-                Alors pour tous vos travaux de plomberie et de chauffage, contactez l'entreprise Morandini pour de plus amples renseignements.</p><br>
-                
-                
-                <h3>Morandini, c'est avant tout votre plombier chauffagiste qui trouve toutes les solutions à vos besoins.</h3>
-                <br><br>
+                {!! $text->texte !!}
             </div>
 
             <div class="container" id="contenu3" style="margin-bottom:100px; margin-top: -50px ;background: rgba(255,255,255,0.8);">
