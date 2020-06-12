@@ -1,5 +1,12 @@
 @extends('layouts.app')
 
+<?php
+    use App\Slider;
+
+    $sliders = Slider::all();
+    $sliderOne = Slider::find(1);
+?>
+
 @section('content')
 
         <div style="z-index: 0" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -10,30 +17,26 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="5000">
-                    <img src="{{asset('images/slider.jpg')}}" class="d-block w-100" alt="...">
+                    <img src="{{asset(  $sliderOne->image  )}}" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <div style="background-color:#007bff87">
-                            <h5>CSC Morandini</h5>
-                            <p>Un plombier chauffagiste qui trouve toutes les solutions à vos besoins</p>
+                            <h5>{{ $sliderOne->title }}</h5>
+                            <p>{{ $sliderOne->paragraphe }}</p>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-interval="5000">
-                    <img src="{{asset('images/slider2.jpg')}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div style="background-color:#007bff87">
-                            <h5>CSC Morandini - Une intervention rapide pour particuliers et professionnels</h5>
+                @foreach ($sliders as $slider)
+                @if ($slider->id > 1)
+                    <div class="carousel-item" data-interval="5000">
+                        <img src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <div style="background-color:#007bff87">
+                                <h5>{{ $slider->title }}</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item" data-interval="5000">
-                    <img src="{{asset('images/slider3.jpg')}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div style="background-color:#007bff87">
-                            <h5>CSC Morandini - Une équipe dynamique & qualifiée à votre écoute</h5>
-                        </div>
-                    </div>
-                </div>
+                @endif
+                @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

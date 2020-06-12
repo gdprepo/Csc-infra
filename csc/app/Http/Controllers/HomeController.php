@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Texte;
 use App\Document;
+use App\Slider;
 
 class HomeController extends Controller
 {
@@ -69,6 +70,7 @@ class HomeController extends Controller
         $plomberie = Texte::find(5);
 
         $document = Document::all();
+        $slider = Slider::all();
 
         $res["welcome"] = $welcome;
         $res["historique"]= $historique;
@@ -77,6 +79,7 @@ class HomeController extends Controller
         $res["plomberie"] = $plomberie;
 
         $res["document"] = $document;
+        $res["slider"] = $slider;
         
 
 

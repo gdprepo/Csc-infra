@@ -12,7 +12,7 @@
             <option value="4">Chauffage</option>
             <option value="5">Plomberie</option>
             <option value="6">Document</option>
-
+            <option value="7">Slider</option>
         </select>
     </div>
 
@@ -40,7 +40,7 @@
 <form class="1 welcome box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['welcome']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
-        <h3>Bienvenue à l'entreprise Morandini</h3>
+        <h3 style="background-color:white" class="card-header">Bienvenue à l'entreprise Morandini</h3>
         <textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short>{!! $res['welcome']->texte !!}</textarea>
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
@@ -49,7 +49,7 @@
 <form class="2 welcome box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['historique']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
-        <h3>Historique</h3>
+        <h3 style="background-color:white" class="card-header">Historique</h3>
         <textarea cols="80" id="editor2" name="editor1" rows="10" data-sample-short>{!! $res['historique']->texte !!}</textarea>
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
@@ -58,7 +58,7 @@
 <form class="3 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['prestation']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
-        <h3>Prestations</h3>
+        <h3 style="background-color:white" class="card-header">Prestations</h3>
         <textarea cols="80" id="editor3" name="editor1" rows="10" data-sample-short>{!! $res['prestation']->texte !!}</textarea>
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
@@ -67,7 +67,7 @@
 <form class="4 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['chauffage']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
-        <h3>Chauffage</h3>
+        <h3 style="background-color:white" class="card-header">Chauffage</h3>
         <textarea cols="80" id="editor4" name="editor1" rows="10" data-sample-short>{!! $res['chauffage']->texte !!}</textarea>
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
@@ -76,22 +76,24 @@
 <form class="5 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
-        <h3>Plomberie</h3>
+        <h3 style="background-color:white" class="card-header">Plomberie</h3>
         <textarea cols="80" id="editor5" name="editor1" rows="10" data-sample-short>{!! $res['plomberie']->texte !!}</textarea>
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>
 
-<form class="6 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
-    @csrf
+<div class="6 prestation box" style="display: none">
+
     <div style="margin-top: 100px" class="container">
-        <h3>Document</h3>
+        <h3 style="background-color:white" class="card-header">Document</h3>
 
         <table style="background-color: white" class="table">
             <thead>
                 <tr>
                 <th scope="col">Titre</th>
                 <th scope="col">Src</th>
+                <th scope="col">Action</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -99,18 +101,58 @@
                 <tr>
                     <td>{{ $document->title }}</td>
                     <td>{{ $document->src }}</td>
+                    <td>
+                    <form action="{{route('document.delete', $document->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
                 </tr>
             @endforeach
             </tbody>
         </table>
-
-
-
-
-
-
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
-</form>
+</div>
+
+<div class="7 slider box" style="display: none">
+
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Slider</h3>
+
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Paragraphe</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['slider'] as $slider)
+                <tr>
+                    <td>{{ $slider->title }}</td>
+                    <td>{{ $slider->paragraphe }}</td>
+                    <td>{{ $slider->image }}</td>
+                    <td>
+                    <form action="{{route('slider.delete', $slider->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+
 
 @endsection

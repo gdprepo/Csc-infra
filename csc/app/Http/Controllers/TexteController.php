@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Texte;
+use App\Document;
+use App\Slider;
 
 class TexteController extends Controller
 {
@@ -31,5 +33,31 @@ class TexteController extends Controller
         }
         
         return redirect()->route('site');
+    }
+
+    public function documentdelete(Request $request, $id)
+    {
+        $document = Document::find($id);
+
+        $document->delete();
+
+        session()->flash('textUpd', 'Document supprimé !');
+
+
+        return redirect()->route('site');
+
+    }
+
+    public function sliderdelete(Request $request, $id)
+    {
+        $slider = Slider::find($id);
+
+        $slider->delete();
+
+        session()->flash('textUpd', 'Slider supprimé !');
+
+
+        return redirect()->route('site');
+
     }
 }

@@ -24,7 +24,7 @@
     <link href="{{ asset('css/image.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
 
-    
+
 </head>
 <body>
     <div id="app">
