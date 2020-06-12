@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Texte;
+use App\Slider;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +19,17 @@ Route::get('/', function () {
     $welcome = Texte::find(1);
     $historique = Texte::find(2);
 
-    return view('welcome', ['welcome' => $welcome], ['historique' => $historique]);
+    $sliders = Slider::all();
+    $sliderOne = Slider::find(1);
+
+    $res['welcome'] = $welcome;
+    $res['historique'] = $historique;
+
+    $res['slider'] = $sliderOne;
+    $res['sliders'] = $sliders;
+    $check = 0;
+
+    return view('welcome', ['res' => $res], ['check' => $check]);
 });
 
 Auth::routes();

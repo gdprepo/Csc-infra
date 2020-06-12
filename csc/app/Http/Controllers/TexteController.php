@@ -56,7 +56,6 @@ class TexteController extends Controller
 
         session()->flash('textUpd', 'Slider supprimé !');
 
-
         return redirect()->route('site');
 
     }

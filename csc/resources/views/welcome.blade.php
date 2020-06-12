@@ -1,11 +1,5 @@
 @extends('layouts.app')
 
-<?php
-    use App\Slider;
-
-    $sliders = Slider::all();
-    $sliderOne = Slider::find(1);
-?>
 
 @section('content')
 
@@ -16,26 +10,22 @@
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-interval="5000">
-                    <img src="{{asset(  $sliderOne->image  )}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <div style="background-color:#007bff87">
-                            <h5>{{ $sliderOne->title }}</h5>
-                            <p>{{ $sliderOne->paragraphe }}</p>
-                        </div>
-                    </div>
-                </div>
-                @foreach ($sliders as $slider)
-                @if ($slider->id > 1)
+
+                @foreach ($res['sliders'] as $slider)
+                @if ($check == 0)
+                    <div class="carousel-item active" data-interval="5000">
+                @else
                     <div class="carousel-item" data-interval="5000">
+                @endif
                         <img src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div style="background-color:#007bff87">
                                 <h5>{{ $slider->title }}</h5>
+                                <p>{{ $slider->paragraphe }}</p>
                             </div>
                         </div>
                     </div>
-                @endif
+                    <?php $check = 1 ?>
                 @endforeach
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -54,14 +44,14 @@
                 <br>
                 <h2>Bienvenue à l'entreprise Morandini<br><span style="font-size:25px;">à Périgny en Charente-Maritime</span></h2>
 
-                {!! $welcome->texte !!}
+                {!! $res['welcome']->texte !!}
             </div>
 
             <div class="container" id="contenu3" style="margin-bottom:100px; margin-top: -50px ;background: rgba(255,255,255,0.8);">
                 <br>
                 <h2>Historique</h2>
 
-                {!! $historique->texte !!}
+                {!! $res['historique']->texte !!}
 			</div>
 
         </div>
