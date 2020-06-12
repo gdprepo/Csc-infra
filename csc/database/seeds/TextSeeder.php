@@ -43,5 +43,40 @@ class TextSeeder extends Seeder
             <b>Au 01/04/2013</b> - Augmentation du capital à 102 000 €</p>
             <br><br>",
         ]);
+
+        DB::table('textes')->insert([
+            'title' => "Prestations",
+            'texte' => "
+            <br>
+            <p>Pour tous vos projets, nous réalisons une étude personnalisée de vos besoins et établissons gratuitement un devis.<br>
+            Nous vous proposons un large choix de matériels de qualité et sommes à votre écoute pour vous conseiller.</p>
+            <br><br>",
+        ]);
+ 
+        DB::table('textes')->insert([
+            'title' => "Chauffage",
+            'texte' => "
+
+            <p>Gaz<br>
+            Electricité<br>
+            Pompe à chaleur<br>
+            Installation<br>
+            Neuf &amp; Rénovation<br>
+            Chauffagerie</p>
+            ",
+        ]);
+
+        DB::table('textes')->insert([
+            'title' => "Plomberie",
+            'texte' => "
+
+            <p>Installation de salle de bains complètes<br>
+            Canalisations<br>
+            Robinetterie<br>
+            Tuyauterie<br>
+            Carrelage<br>
+            PMR (pour maintien de personnes à domicile)</p>
+            ",
+        ]);
     }
 }

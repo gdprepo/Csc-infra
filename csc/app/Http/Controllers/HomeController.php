@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\Texte;
+use App\Document;
 
 class HomeController extends Controller
 {
@@ -63,8 +64,23 @@ class HomeController extends Controller
     {
         $welcome = Texte::find(1);
         $historique = Texte::find(2);
+        $prestations = Texte::find(3);
+        $chauffage = Texte::find(4);
+        $plomberie = Texte::find(5);
 
-        return view('dashboard.site.index', ['welcome' => $welcome], ['historique' => $historique]);
+        $document = Document::all();
+
+        $res["welcome"] = $welcome;
+        $res["historique"]= $historique;
+        $res["prestation"] = $prestations;
+        $res["chauffage"] = $chauffage;
+        $res["plomberie"] = $plomberie;
+
+        $res["document"] = $document;
+        
+
+
+        return view('dashboard.site.index', ['res' => $res]);
     }
 
     public function deconnection()

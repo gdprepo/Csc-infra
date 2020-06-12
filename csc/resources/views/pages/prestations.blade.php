@@ -50,35 +50,22 @@
             <div class="container" style="margin-bottom:100px; margin-top:50px" id="contenu">
 				<br>
 				<h2>Nos prestations</h2>
-				<br>
-				<p>Pour tous vos projets, nous réalisons une étude personnalisée de vos besoins et établissons gratuitement un devis.<br>
-				Nous vous proposons un large choix de matériels de qualité et sommes à votre écoute pour vous conseiller.</p>
-				<br><br>
+				{!! $res['prestation']->texte !!}
 			</div>
 
             <div style="margin-top: -50px; margin-bottom: 50px" id="contenu3">
 				<div id="colonne1">
 					<h3 style="text-align: left">Nos travaux de chauffage</h3>
-						<article>
-							<p>Gaz<br>
-							Electricité<br>
-							Pompe à chaleur<br>
-							Installation<br>
-							Neuf &amp; Rénovation<br>
-							Chauffagerie</p>
-						</article>
+					<article>
+						{!! $res['chauffage']->texte !!}
+					</article>
 				</div>
 
 				<div id="colonne2">
 					<h3 style="text-align: left">Nos travaux de plomberie</h3>
-						<article>
-							<p>Installation de salle de bains complètes<br>
-							Canalisations<br>
-							Robinetterie<br>
-							Tuyauterie<br>
-							Carrelage<br>
-							PMR (pour maintien de personnes à domicile)</p>
-						</article>
+					<article>
+						{!! $res['plomberie']->texte !!}
+					</article>
 				</div>
             </div>
             
@@ -87,22 +74,11 @@
 				<h2>Documents administratifs</h2>
 				<br>
 				<p style="text-align:center">
-					<a href="images/ATTESTATION-2020-CSC-MORANDINI-CHAUFFAGES-SANITAIRE.pdf" title="Télécharger" target="_blank">Attestation d'assurance</a>
-					<br>
-					<a href="images/csc_identite_pro.pdf" title="Télécharger" target="_blank">Certificat d'identité professionnelle des entreprises artisanales du batiment</a>
-					<br>
-					<a href="images/ATTESTATION-2020-CSC-MORANDINI-CHAUFFAGES-SANITAIRE.pdf" title="Télécharger" target="_blank">Attestation d'assurance Responsabilité décennale</a>
-					<br>
-					<a href="images/csc_appellation_gaz_2020.pdf" title="Télécharger" target="_blank">Appellation professionnel du Gaz</a>
-					<br>
-					<a href="images/CERTIFICAT-QUALIBAT-2019-2020.jpg" title="Télécharger" target="_blank">Certificat Qualibat 2019</a>
-					<br>
-					<a href="images/CERTIFICAT-RGE-2019-2020.jpg" title="Télécharger" target="_blank">Certificat Qualibat "RGE" 2019</a>
-					<br>
-					<!-- <a href="images/attestation-handibat.pdf" title="Télécharger" target="_blank">Attestation de droit d'usage de la marque Handibat</a>
-					<br/> -->
-					<a href="images/csc_attestation_validation_connaissances_gaz.pdf" title="Télécharger" target="_blank">Attestation de validation des connaissances Gaz</a>
-				</p>
+					@foreach($res['document'] as $document)
+						<a href="{{ $document->src }}" title="Télécharger" target="_blank">{{ $document->title }}</a>
+						<br>
+					@endforeach
+				</p> 
 				<br><br>
 			</div>
 

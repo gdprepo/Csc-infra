@@ -2,12 +2,30 @@
 
 @section('content')
 
-<select id="globalstyleselect" class="custom-select custom-select-lg mb-3">
-    <option selected>Choisir une partie a modifier</option>
-    <option value="1">Welcome</option>
-    <option value="2">Historique</option>
-    <option value="3">Three</option>
-</select>
+<div class=" row">
+    <div style="padding-right:0" class="col-md-6">
+        <select id="globalstyleselect" class="custom-select custom-select-lg mb-3">
+            <option selected>Choisir un paragraphe a modifier</option>
+            <option value="1">Welcome</option>
+            <option value="2">Historique</option>
+            <option value="3">Prestations</option>
+            <option value="4">Chauffage</option>
+            <option value="5">Plomberie</option>
+            <option value="6">Document</option>
+
+        </select>
+    </div>
+
+    <div style="padding-left:0" class="col-md-6">
+        <select id="globalstyleselect" class="custom-select custom-select-lg mb-3">
+            <option selected>Choisir une page a modifier</option>
+            <option value="welcome">Page welcome</option>
+            <option value="prestation">Page prestation</option>
+            <option value="3">Prestations</option>
+        </select>
+    </div>
+
+</div>
 
 
 <div style="margin-top:50px; margin-bottom:-50px" class="container">
@@ -19,21 +37,78 @@
     @endif
 </div>
 
-
-<form class="1 box" style="display: none" method="POST" action="{{ route('welcome.upd', $welcome->id) }}">
+<form class="1 welcome box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['welcome']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3>Bienvenue à l'entreprise Morandini</h3>
-        <textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short>{!! $welcome->texte !!}</textarea>
+        <textarea cols="80" id="editor1" name="editor1" rows="10" data-sample-short>{!! $res['welcome']->texte !!}</textarea>
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>
 
-<form class="2 box" style="display: none" method="POST" action="{{ route('welcome.upd', $historique->id) }}">
+<form class="2 welcome box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['historique']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3>Historique</h3>
-        <textarea cols="80" id="editor2" name="editor1" rows="10" data-sample-short>{!! $historique->texte !!}</textarea>
+        <textarea cols="80" id="editor2" name="editor1" rows="10" data-sample-short>{!! $res['historique']->texte !!}</textarea>
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="3 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['prestation']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3>Prestations</h3>
+        <textarea cols="80" id="editor3" name="editor1" rows="10" data-sample-short>{!! $res['prestation']->texte !!}</textarea>
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="4 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['chauffage']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3>Chauffage</h3>
+        <textarea cols="80" id="editor4" name="editor1" rows="10" data-sample-short>{!! $res['chauffage']->texte !!}</textarea>
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="5 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3>Plomberie</h3>
+        <textarea cols="80" id="editor5" name="editor1" rows="10" data-sample-short>{!! $res['plomberie']->texte !!}</textarea>
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="6 prestation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3>Document</h3>
+
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Src</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['document'] as $document)
+                <tr>
+                    <td>{{ $document->title }}</td>
+                    <td>{{ $document->src }}</td>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+
+
+
+
+
+
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>

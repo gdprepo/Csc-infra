@@ -20,6 +20,15 @@ class TexteController extends Controller
         if ($id == 2) {
             session()->flash('textUpd', 'Historique mis à jour !');
         }
+        if ($id == 3) {
+            session()->flash('textUpd', 'Prestations mis à jour !');
+        }
+        if ($id == 4) {
+            session()->flash('textUpd', 'Chauffage mis à jour !');
+        }
+        if ($id == 5) {
+            session()->flash('textUpd', 'Plomberie mis à jour !');
+        }
         
         return redirect()->route('site');
     }
