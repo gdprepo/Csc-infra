@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Texte;
 use App\Document;
+use App\Realisation;
+use App\Image;
 
 class PageController extends Controller
 {
@@ -25,7 +27,25 @@ class PageController extends Controller
 
     public function realisations()
     {
-        return view('/pages/realisations');
+        $realisation = Realisation::find(1);
+        $plomberie = Realisation::find(2);
+        $douche = Realisation::find(3);
+        $douche_apres = Realisation::find(4);
+        $restauration = Realisation::find(5);
+        $restauration_apres = Realisation::find(6);
+
+        $references = Texte::find(6);
+
+        $res["salleDeBain"] = $realisation;
+        $res["plomberie"] = $plomberie;
+        $res["douche"] = $douche;
+        $res["douche_apres"] = $douche_apres;
+        $res["restauration"] = $restauration;
+        $res["restauration_apres"] = $restauration_apres;
+        $res["references"] = $references;
+
+
+        return view('/pages/realisations', ['res' => $res]);
     }
 
     public function showrooms()

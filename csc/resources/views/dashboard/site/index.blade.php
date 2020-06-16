@@ -13,6 +13,8 @@
             <option value="5">Plomberie</option>
             <option value="6">Document</option>
             <option value="7">Slider</option>
+            <option value="8">Realisations</option>
+
         </select>
     </div>
 
@@ -153,6 +155,15 @@
         </table>
     </div>
 </div>
+
+<form class="8 realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Réalisations</h3>
+        <textarea cols="80" id="editor6" name="editor1" rows="10" data-sample-short>{!! $res['plomberie']->texte !!}</textarea>
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
 
 
 @endsection

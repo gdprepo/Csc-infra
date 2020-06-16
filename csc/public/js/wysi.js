@@ -22,3 +22,8 @@ CKEDITOR.replace('editor5', {
   height: 400,
   baseFloatZIndex: 10005
 });
+
+CKEDITOR.replace('editor6', {
+  height: 400,
+  baseFloatZIndex: 10005
+});

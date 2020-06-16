@@ -78,5 +78,74 @@ class TextSeeder extends Seeder
             PMR (pour maintien de personnes à domicile)</p>
             ",
         ]);
+
+        DB::table('textes')->insert([
+            'title' => "References",
+            'texte' => "
+
+            <br><h3 style='text-align:left;'>ANNÉE  2004 : Création  de l'entreprise Artisanale</h3>
+            <p>Réfection de la sous-station de l'HOPITAL ST LOUIS à LA ROCHELLE<br>
+            Pose climatisation groupe STECADEF à CHATELALLION<br>
+            Reprise réseau eau froide HOPITAL ST LOUIS</p>
+            <br><br>
+            
+            <h3 style='text-align:left;'>ANNÉE  2005</h3>
+            <p>Modification sur réseau hydraulique CENTRE MEDICO-CHIRURGICAL DE L'ATLANTIQUE A LA ROCHELLE<br>
+            Pose de radiateurs ACOVA chez  MME JEANNEAU<br>
+            Divers travaux de maintenance et refection complète sanitaire pour le parc locatif De la  SA HLM ATLANTIC AMENAGEMENT<br>
+            Changement de robinets et tés de réglage sur toute une aile de bâtiment</p><br><br>
+            
+            <h3 style='text-align:left;'>ANNÉE  2006</h3>
+            <p>Modification   hydraulique   sur   ventilo-convecteurs   sur le chantier  du pöle de réanimation de l'HOPITAL ST LOUIS<br>
+            Raccordement d'un surpresseur résidence ORBIGNY à LA ROCHELLE <br>
+            Raccordement d'une CTA en corronarographie HOPITAL LA ROCHELLE<br>
+            Divers travaux de maintenance et réfection complète sanitaire pour le parc Locatif de la SA HLM ATLANTIC</p><br><br>
+            
+            <h3 style='text-align:left;'>ANNÉE  2007</h3>
+            <p>Divers travaux de maintenance et réfection complète des sanitaires pour le parc Locatif de la SA HLM ATLANTIC AMENAGEMENT<br>
+            Travaux   de   maintenance   et  dépannage   pour  le   Cabinet   DEMOUGINS   ET FONCIA<br>
+            Raccordement  hydraulique d'un caisson CTA sur le site HOPITAL ST LOUIS A LA ROCHELLE<br>
+            Travaux sur installation de chauffage maison de retraite  BAT ABC sur 3 niveaux (environ 160 Chambres) changement des robinets  et tés de réglage sur radiateurs Centre Hospitalier St Louis La Rochelle</p><br><br>
+            
+            <h3 style='text-align:left;'>ANNÉE  2008 : Création de la SARL CSC Morandini</h3>
+            <p>Divers travaux de maintenance pour la SA HLM ATLANTIC  AMENAGEMENT et CABINET DEMOUGINS ET FONCIA<br>
+            Travaux raccordement et réseau EU  pour INRAP L'HOUMEAU<br>
+            Travaux hydrauliques en sous-traitance pour DALKIA </p><br><br>
+            
+            <h3 style='text-align:left;'>ANNÉE  2009</h3>
+            <p>Hôtel KYRIAD La Rochelle rénovation des sanitaires et production  ECS (50 chambres, 1 logement et les communs)<br>
+            Divers travaux de maintenance et réfection complète des sanitaire pour le parc locatif de la SA HLM ATLANTIC<br>
+            AMENAGEMENT pour le Cabinet  DEMOUJIN - FONCIA ­ CHANDEAU et CEYRAT<br>
+            Travaux hydrauliques en sous-traitance pour DALKIA<br>
+            Réfection de sanitaires et dépannage réseaux pour les services du Génie MINISTERE de la DEFENSE La Rochelle</p><br><br>
+            
+            <h3 style='text-align:left;'>ANNÉES  2011 - 2012 - 2013 - 2014 - 2015</h3>
+            <p>Divers travaux de maintenance : PICHET IMMOBILIER / FONCIA / SA HLM ATLANTIC AMENAGEMENT / PARTICULIERS / GROUPE SUP DE CO<br>
+            Remplacement de l'ensemble des radiateurs chauffage central résidence « LA CHALOUPE LA ROCHELLE »<br>
+            Appel d'offres MINISTERE DE LA DEFENSE remplacement chaudières Gaz<br>				Rénovation  complète salle de Bain Particuliers  et Parc locatif HLM ATLANTIC AMMENAGEMENT<br>
+            Salle  de Bains  transformation  remplacement  baignoire  par Bac à douches  Parc locatif ATLANTIC AMENAGEMENT et PARTICULIERS<br>
+            Travaux hydrauliques en sous-traitance pour DALKIA</p>
+            <br><br>
+            
+            <h3 style='text-align:left;'>ANNÉE 2016</h3>
+            <p>Divers travaux de maintenance : PICHET IMMOBILIER / FONCIA / DEMOUGIN / ATLANTIC AMENAGEMENT / CLARA AUTOMOBILES<br>
+            Travaux hydraulique en sous-traitance pour DALKIA<br>
+            Rénovation complète de salle de bain particulier et parc locatif HLM<br>
+            Salle de bains transformation remplacement baignoire par Bac à douche Parc locatif ATLANTIC AMENAGEMENT et Particuliers<br>
+            Travaux de maintenance EUROMASTER / LODIPAT OCEAN / FNATH / MINISTERE DE LA DEFENSE</p>
+            <br><br>
+            
+            <h3 style='text-align:left;'>ANNÉE 2017</h3>
+            <p>Divers travaux de maintenance pour FONCIA/ PICHET IMMOBILIER &amp; SERVICES/ CABINET DEMOUGIN/ ATLANTIC AMENAGEMENT<br>
+            Travaux hydrauliques en sous-traitance pour DALKIA<br>
+            Rénovation complète de salle de bains Particuliers et Parc locatif HLM<br>
+            Salle de bains transformation remplacement baignoire par bac à douche Particuliers et Parc Locatif ATLANTIC AMENAGEMENT<br>
+            Travaux de maintenance pour GIFI / EUROMASTER/ LODIPAT OCEAN /FNATH/Mairie de SAINT-ROGATIEN.<br>
+            <br><br>
+            
+            </p>
+            ",
+        ]);
+
     }
 }

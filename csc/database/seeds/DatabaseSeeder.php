@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call(TextSeeder::class);
         $this->call(DocumentSeeder::class);
         $this->call(SliderSeeder::class);
+        $this->call(RealisationSeeder::class);
+        $this->call(ImageSeeder::class);
 
     }
 }

@@ -31,7 +31,7 @@
         $sliders = Slider::all();
         $res['sliders'] = $sliders;
         $check = 0;
-        $page = $_SERVER['PATH_INFO'];
+        $page = $_SERVER['PHP_SELF'];
     ?>
 
 
@@ -63,7 +63,8 @@
                     </ul>
                 </div>
             </nav>
-            @if($page == "/login")
+
+            @if ($page == "/index.php/login")
             @else
             <div style="z-index: 0" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
