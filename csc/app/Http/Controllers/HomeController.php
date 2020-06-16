@@ -8,6 +8,7 @@ use App\User;
 use App\Texte;
 use App\Document;
 use App\Slider;
+use App\Realisation;
 
 class HomeController extends Controller
 {
@@ -68,9 +69,17 @@ class HomeController extends Controller
         $prestations = Texte::find(3);
         $chauffage = Texte::find(4);
         $plomberie = Texte::find(5);
+        $references = Texte::find(6);
 
         $document = Document::all();
         $slider = Slider::all();
+
+        $realisation = Realisation::find(1);
+        $plomberie = Realisation::find(2);
+        $douche = Realisation::find(3);
+        $douche_apres = Realisation::find(4);
+        $restauration = Realisation::find(5);
+        $restauration_apres = Realisation::find(6);
 
         $res["welcome"] = $welcome;
         $res["historique"]= $historique;
@@ -80,8 +89,14 @@ class HomeController extends Controller
 
         $res["document"] = $document;
         $res["slider"] = $slider;
-        
 
+        $res["salleDeBain"] = $realisation;
+        $res["plomberie"] = $plomberie;
+        $res["douche"] = $douche;
+        $res["douche_apres"] = $douche_apres;
+        $res["restauration"] = $restauration;
+        $res["restauration_apres"] = $restauration_apres;
+        $res["references"] = $references;
 
         return view('dashboard.site.index', ['res' => $res]);
     }

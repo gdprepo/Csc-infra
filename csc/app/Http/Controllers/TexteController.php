@@ -59,4 +59,16 @@ class TexteController extends Controller
         return redirect()->route('site');
 
     }
+
+    public function realisationdelete(Request $request, $id)
+    {
+        $realisation = Realisation::all()->images()->where('image_id', $id);
+
+        $realisation->delete();
+
+        session()->flash('textUpd', 'Image supprimé !');
+
+        return redirect()->route('site');
+
+    }
 }

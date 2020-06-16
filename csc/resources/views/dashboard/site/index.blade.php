@@ -13,8 +13,6 @@
             <option value="5">Plomberie</option>
             <option value="6">Document</option>
             <option value="7">Slider</option>
-            <option value="8">Realisations</option>
-
         </select>
     </div>
 
@@ -23,7 +21,7 @@
             <option selected>Choisir une page a modifier</option>
             <option value="welcome">Page welcome</option>
             <option value="prestation">Page prestation</option>
-            <option value="3">Prestations</option>
+            <option value="realisation">Page realisation</option>
         </select>
     </div>
 
@@ -156,14 +154,254 @@
     </div>
 </div>
 
-<form class="8 realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
+<form class="8 realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['salleDeBain']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
-        <h3 style="background-color:white" class="card-header">Réalisations</h3>
-        <textarea cols="80" id="editor6" name="editor1" rows="10" data-sample-short>{!! $res['plomberie']->texte !!}</textarea>
+        <h3 style="background-color:white" class="card-header">Salle De Bain</h3>
+        <textarea cols="80" id="editor6" name="editor1" rows="10" data-sample-short>{!! $res['salleDeBain']->texte !!}</textarea>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['salleDeBain']->images as $salleDeBain)
+                <tr>
+                    <td>{{ $salleDeBain->title }}</td>
+                    <td>{{ $salleDeBain->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $salleDeBain->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
         <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>
+
+<form class="plomberie realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Plomberie</h3>
+        <textarea cols="80" id="editor7" name="editor1" rows="10" data-sample-short>{!! $res['plomberie']->texte !!}</textarea>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['plomberie']->images as $plomberie)
+                <tr>
+                    <td>{{ $plomberie->title }}</td>
+                    <td>{{ $plomberie->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $plomberie->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="douche realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['douche']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Douche</h3>
+        <textarea cols="80" id="editor8" name="editor1" rows="10" data-sample-short>{!! $res['douche']->texte !!}</textarea>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['douche']->images as $douche)
+                <tr>
+                    <td>{{ $douche->title }}</td>
+                    <td>{{ $douche->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $douche->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="douche_apres realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['douche_apres']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Douche Apres</h3>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['douche_apres']->images as $douche_apres)
+                <tr>
+                    <td>{{ $douche_apres->title }}</td>
+                    <td>{{ $douche_apres->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $douche_apres->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="restauration realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['restauration']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Restauration</h3>
+        <textarea cols="80" id="editor9" name="editor1" rows="10" data-sample-short>{!! $res['restauration']->texte !!}</textarea>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['restauration']->images as $restauration)
+                <tr>
+                    <td>{{ $restauration->title }}</td>
+                    <td>{{ $restauration->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $restauration->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="restauration_apres realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['restauration_apres']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Restauration Apres</h3>
+        <textarea cols="80" id="editor10" name="editor1" rows="10" data-sample-short>{!! $res['restauration_apres']->texte !!}</textarea>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['restauration_apres']->images as $restauration_apres)
+                <tr>
+                    <td>{{ $restauration_apres->title }}</td>
+                    <td>{{ $restauration_apres->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $restauration_apres->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="references realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['references']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">References</h3>
+        <textarea cols="80" id="editor11" name="editor1" rows="10" data-sample-short>{!! $res['references']->texte !!}</textarea>
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
 
 
 @endsection

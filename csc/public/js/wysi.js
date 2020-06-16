@@ -27,3 +27,28 @@ CKEDITOR.replace('editor6', {
   height: 400,
   baseFloatZIndex: 10005
 });
+
+CKEDITOR.replace('editor7', {
+  height: 400,
+  baseFloatZIndex: 10005
+});
+
+CKEDITOR.replace('editor8', {
+  height: 400,
+  baseFloatZIndex: 10005
+});
+
+CKEDITOR.replace('editor9', {
+  height: 400,
+  baseFloatZIndex: 10005
+});
+
+CKEDITOR.replace('editor10', {
+  height: 400,
+  baseFloatZIndex: 10005
+});
+
+CKEDITOR.replace('editor11', {
+  height: 400,
+  baseFloatZIndex: 10005
+});
