@@ -147,5 +147,34 @@ class TextSeeder extends Seeder
             ",
         ]);
 
+        DB::table('textes')->insert([
+            'title' => "Showroom",
+            'texte' => "
+            <p>Etant membre de la COVAP, coopératives d'artisans, nous mettons à votre disposition un Showroom de sanitaires, cuisines et chauffages.
+            Contactez-nous afin que nous prenions rendez-vous pour une visite. <b>Inspiration garantie pour vos projets !</b></p>    
+            ",
+        ]);
+
+        DB::table('textes')->insert([
+            'title' => "Adresse",
+            'texte' => "
+            <p><b>Adresse :</b></p>
+            <p>ZA Rue des Greffières<br> 
+            17140 LAGORD</p><br>",
+        ]);
+
+        DB::table('textes')->insert([
+            'title' => "Horaire",
+            'texte' => "
+            <p><b>Heures d’ouverture :</b></p>
+            <p>Lundi : 14H00 - 18H20<br>
+            Mardi au vendredi : 9H00  -  12H00 &amp; 14H00  - 18H20<br>
+            Samedi : 9H00  -  12H00</p>",
+        ]);
+        
+
+
+
+
     }
 }

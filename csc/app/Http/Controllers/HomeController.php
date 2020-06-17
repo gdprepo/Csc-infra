@@ -70,6 +70,9 @@ class HomeController extends Controller
         $chauffage = Texte::find(4);
         $plomberie = Texte::find(5);
         $references = Texte::find(6);
+        $showroom = Texte::find(7);
+        $adresse = Texte::find(8);
+        $horaire = Texte::find(9);
 
         $document = Document::all();
         $slider = Slider::all();
@@ -80,6 +83,7 @@ class HomeController extends Controller
         $douche_apres = Realisation::find(4);
         $restauration = Realisation::find(5);
         $restauration_apres = Realisation::find(6);
+        $restauration_apres = Realisation::find(7);
 
         $res["welcome"] = $welcome;
         $res["historique"]= $historique;
@@ -97,6 +101,9 @@ class HomeController extends Controller
         $res["restauration"] = $restauration;
         $res["restauration_apres"] = $restauration_apres;
         $res["references"] = $references;
+        $res["showroom"] = $showroom;
+        $res["adresse"] = $adresse;
+        $res["horaire"] = $horaire;
 
         return view('dashboard.site.index', ['res' => $res]);
     }

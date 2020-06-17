@@ -50,7 +50,19 @@ class PageController extends Controller
 
     public function showrooms()
     {
-        return view('/pages/showrooms');
+        $showroom = Texte::find(7);
+        $adresse = Texte::find(8);
+        $horaire = Texte::find(9);
+        $map = Realisation::find(7);
+        $galerie = Realisation::find(8);
+
+        $res["showroom"] = $showroom;
+        $res["adresse"] = $adresse;
+        $res["horaire"] = $horaire;
+        $res["map"] = $map;
+        $res["galerie"] = $galerie;
+
+        return view('/pages/showrooms', ['res' => $res]);
     }
 
     public function contact()

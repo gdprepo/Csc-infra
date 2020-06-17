@@ -155,5 +155,85 @@ class ImageSeeder extends Seeder
             'title' => "restauration aprés",
             'src' => "images/gallerie/4_012g.jpg",
         ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom map",
+            'src' => "images/showrooms/plan_covap.png",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/1.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/2.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/3.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/4.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/5.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/6.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/7.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/8.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/9.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/10.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/11.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/12.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/13.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/14.jpg",
+        ]);
+
+        DB::table('images')->insert([
+            'title' => "showroom galerie",
+            'src' => "images/showrooms/15.jpg",
+        ]);
     }
 }

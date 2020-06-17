@@ -53,6 +53,18 @@ class RealisationSeeder extends Seeder
             'texte' => "",
         ]);
 
+        DB::table('realisations')->insert([
+            'title' => "showroom",
+            'texte' => "
+            ",
+        ]);
+
+        DB::table('realisations')->insert([
+            'title' => "showroom galerie",
+            'texte' => "
+            ",
+        ]);
+
         DB::table('image_realisation')->insert([
             'realisation_id' => 1,
             'image_id' => 1,
@@ -196,6 +208,86 @@ class RealisationSeeder extends Seeder
         DB::table('image_realisation')->insert([
             'realisation_id' => 6,
             'image_id' => 29,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 7,
+            'image_id' => 30,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 31,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 32,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 33,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 34,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 35,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 36,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 37,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 38,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 39,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 40,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 41,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 42,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 43,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 44,
+        ]);
+
+        DB::table('image_realisation')->insert([
+            'realisation_id' => 8,
+            'image_id' => 45,
         ]);
     }
 }
