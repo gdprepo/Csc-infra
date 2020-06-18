@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Texte;
 use App\Document;
 use App\Slider;
+use App\Realisation;
+
 
 class TexteController extends Controller
 {
@@ -31,6 +33,33 @@ class TexteController extends Controller
         if ($id == 5) {
             session()->flash('textUpd', 'Plomberie mis à jour !');
         }
+        if ($id == 6) {
+            session()->flash('textUpd', 'Reference Realisation mis à jour !');
+        }
+        
+        return redirect()->route('site');
+    }
+
+    public function updRealisation(Request $request, $id)
+    {
+        $text = Realisation::find($id);
+
+        $text->texte = $request->editor1;
+        $text->save();
+
+        if($id == 1) {
+            session()->flash('textUpd', 'Salle de bain Realisation mis à jour !');
+        }
+        if ($id == 2) {
+            session()->flash('textUpd', 'Plomberie Realisation mis à jour !');
+        }
+        if ($id == 3) {
+            session()->flash('textUpd', 'Douche Realisation mis à jour !');
+        }
+        if ($id == 5) {
+            session()->flash('textUpd', 'Restauration Realisation mis à jour !');
+        }
+
         
         return redirect()->route('site');
     }

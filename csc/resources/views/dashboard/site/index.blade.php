@@ -182,7 +182,7 @@
     </div>
 </form>
 
-<form class="8 realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['salleDeBain']->id) }}">
+<form class="8 realisation box" style="display: none" method="POST" action="{{ route('realisation.upd', $res['salleDeBain']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Salle De Bain</h3>
@@ -222,11 +222,11 @@
     </div>
 </form>
 
-<form class="plomberie realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['plomberie']->id) }}">
+<form class="plomberie realisation box" style="display: none" method="POST" action="{{ route('realisation.upd', $res['plomberie_realisation']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
-        <h3 style="background-color:white" class="card-header">Plomberie</h3>
-        <textarea cols="80" id="editor7" name="editor1" rows="10" data-sample-short>{!! $res['plomberie']->texte !!}</textarea>
+        <h3 style="background-color:white" class="card-header">Plomberie Realisation</h3>
+        <textarea cols="80" id="editor7" name="editor1" rows="10" data-sample-short>{!! $res['plomberie_realisation']->texte !!}</textarea>
         
         <table style="background-color: white" class="table">
             <thead>
@@ -238,7 +238,7 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach($res['plomberie']->images as $plomberie)
+            @foreach($res['plomberie_realisation']->images as $plomberie)
                 <tr>
                     <td>{{ $plomberie->title }}</td>
                     <td>{{ $plomberie->src }}</td>
@@ -262,7 +262,7 @@
     </div>
 </form>
 
-<form class="douche realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['douche']->id) }}">
+<form class="douche realisation box" style="display: none" method="POST" action="{{ route('realisation.upd', $res['douche']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Douche</h3>
@@ -302,7 +302,7 @@
     </div>
 </form>
 
-<form class="douche_apres realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['douche_apres']->id) }}">
+<form class="douche_apres realisation box" style="display: none" method="POST" action="{{ route('realisation.upd', $res['douche_apres']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Douche Apres</h3>
@@ -341,7 +341,7 @@
     </div>
 </form>
 
-<form class="restauration realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['restauration']->id) }}">
+<form class="restauration realisation box" style="display: none" method="POST" action="{{ route('realisation.upd', $res['restauration']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Restauration</h3>
@@ -381,11 +381,10 @@
     </div>
 </form>
 
-<form class="restauration_apres realisation box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['restauration_apres']->id) }}">
+<form class="restauration_apres realisation box" style="display: none" method="POST" action="{{ route('realisation.upd', $res['restauration_apres']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Restauration Apres</h3>
-        <textarea cols="80" id="editor10" name="editor1" rows="10" data-sample-short>{!! $res['restauration_apres']->texte !!}</textarea>
         
         <table style="background-color: white" class="table">
             <thead>
