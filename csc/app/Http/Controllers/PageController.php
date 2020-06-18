@@ -67,6 +67,14 @@ class PageController extends Controller
 
     public function contact()
     {
-        return view('/pages/contact');
+        $contact = Texte::find(10);
+        $coordonees = Texte::find(11);
+        $zone = Texte::find(12);
+
+        $res["contact"] = $contact;
+        $res["coordonees"] = $coordonees;
+        $res["zone"] = $zone;
+
+        return view('/pages/contact', ['res' => $res]);
     }
 }

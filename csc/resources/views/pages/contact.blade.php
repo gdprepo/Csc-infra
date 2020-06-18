@@ -10,8 +10,8 @@
                     <br>
                     <h2>Nous contacter</h2>
                     <br>
-                    <p>N'hésitez pas à nous contacter afin que nous étudions ensemble votre projet.</p>
-                    <br><br>
+                        {!! $res['contact']->texte !!}
+                    <br>
                 </div>
         
                 <br><br>
@@ -21,12 +21,7 @@
                         <div id="colonne3">
                             <h3 style="text-align: left">Nos coordonnées</h3>
                                 <article>
-                                    <p>
-                                        <b>Adresse :</b> 10 Rue Augustin Fresnel  -  17180 Périgny<br>
-                                        <b>Téléphone :</b> 05 46 52 19 23<br>
-                                        <b>Mobile :</b> 06 61 48 03 42<br>
-                                        <b>Email :</b> j.morandini@csc-morandini.fr
-                                    </p>
+                                    {!! $res['coordonees']->texte !!}
                                 </article>
                         </div>
                         
@@ -35,8 +30,7 @@
                         <div id="colonne4">
                             <h3 style="text-align: left">Notre zone d'intervention</h3>
                                 <article>
-                                    <p><b>L'entreprise Morandini intervient pour la plomberie et le chauffage dans un rayon de 15 km autour de Périgny :</b><br>
-                                    dans les environs de La Rochelle, Dompierre-sur-Mer, Angoulins, Châtelaillon-Plage, Nieul-sur-Mer, Lagord, Saint Médard d'Aunis et l'Île de Ré.</p>
+                                {!! $res['zone']->texte !!}
                                 </article>
                         </div>
                         

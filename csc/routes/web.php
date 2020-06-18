@@ -41,6 +41,7 @@ Route::get('/dashboard/client/add', 'HomeController@clientadd')->name('client.ad
 Route::get('/dashboard/client/password', 'HomeController@clientpassword')->name('client.password');
 
 Route::get('/dashboard/site', 'HomeController@site')->name('site');
+Route::get('/dashboard/siteContact', 'HomeController@contact')->name('site.contact');
 Route::post('/dashboard/site/welcome/upd/{id}', 'TexteController@welcome')->name('welcome.upd');
 Route::post('/dashboard/site/realisation/upd/{id}', 'TexteController@updRealisation')->name('realisation.upd');
 Route::post('/dashboard/site/document/delete/{id}', 'TexteController@documentdelete')->name('document.delete');

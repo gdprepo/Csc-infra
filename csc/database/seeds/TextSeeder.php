@@ -171,7 +171,33 @@ class TextSeeder extends Seeder
             Mardi au vendredi : 9H00  -  12H00 &amp; 14H00  - 18H20<br>
             Samedi : 9H00  -  12H00</p>",
         ]);
-        
+
+        DB::table('textes')->insert([
+            'title' => "Contact",
+            'texte' => "
+            <p>N'hésitez pas à nous contacter afin que nous étudions ensemble votre projet.</p>
+            <br>",
+        ]);
+
+        DB::table('textes')->insert([
+            'title' => "Coordonnees",
+            'texte' => "
+            <p>
+            <b>Adresse :</b> 10 Rue Augustin Fresnel  -  17180 Périgny<br>
+            <b>Téléphone :</b> 05 46 52 19 23<br>
+            <b>Mobile :</b> 06 61 48 03 42<br>
+            <b>Email :</b> j.morandini@csc-morandini.fr
+        </p>",
+        ]);
+
+        DB::table('textes')->insert([
+            'title' => "Zone",
+            'texte' => "
+            <p><b>L'entreprise Morandini intervient pour la plomberie et le chauffage dans un rayon de 15 km autour de Périgny :</b><br>
+            dans les environs de La Rochelle, Dompierre-sur-Mer, Angoulins, Châtelaillon-Plage, Nieul-sur-Mer, Lagord, Saint Médard d'Aunis et l'Île de Ré.</p>
+            ",
+        ]);
+                    
 
 
 

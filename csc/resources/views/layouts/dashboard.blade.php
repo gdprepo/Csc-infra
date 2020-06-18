@@ -107,6 +107,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('site') }}">Affichage</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('site.contact') }}">Contact</a>
+              </li>
               @endif
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('deconnection') }}">Se deconnecter</a>

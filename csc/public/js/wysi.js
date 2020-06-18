@@ -67,3 +67,18 @@ CKEDITOR.replace('editor14', {
   height: 400,
   baseFloatZIndex: 10005
 });
+
+CKEDITOR.replace('editor15', {
+  height: 400,
+  baseFloatZIndex: 10005
+});
+
+CKEDITOR.replace('editor16', {
+  height: 400,
+  baseFloatZIndex: 10005
+});
+
+CKEDITOR.replace('editor17', {
+  height: 400,
+  baseFloatZIndex: 10005
+});

@@ -73,6 +73,9 @@ class HomeController extends Controller
         $showroom = Texte::find(7);
         $adresse = Texte::find(8);
         $horaire = Texte::find(9);
+        $contact = Texte::find(10);
+        $coordonees = Texte::find(11);
+        $zone = Texte::find(12);
 
         $document = Document::all();
         $slider = Slider::all();
@@ -108,8 +111,37 @@ class HomeController extends Controller
         $res["showroom"] = $showroom;
         $res["adresse"] = $adresse;
         $res["horaire"] = $horaire;
+        $res["contact"] = $contact;
+        $res["coordonees"] = $coordonees;
+        $res["zone"] = $zone;
+
 
         return view('dashboard.site.index', ['res' => $res]);
+    }
+
+    public function contact()
+    {        
+        $showroom = Texte::find(7);
+        $adresse = Texte::find(8);
+        $horaire = Texte::find(9);
+        $contact = Texte::find(10);
+        $coordonees = Texte::find(11);
+        $zone = Texte::find(12);
+
+        $map = Realisation::find(7);
+        $galerie = Realisation::find(8);
+
+        $res["map"] = $map;
+        $res["galerie"] = $galerie;
+
+        $res["showroom"] = $showroom;
+        $res["adresse"] = $adresse;
+        $res["horaire"] = $horaire;
+        $res["contact"] = $contact;
+        $res["coordonees"] = $coordonees;
+        $res["zone"] = $zone;
+
+        return view('dashboard.site.page', ['res' => $res]);
     }
 
     public function deconnection()
