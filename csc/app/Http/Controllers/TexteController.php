@@ -36,6 +36,15 @@ class TexteController extends Controller
         if ($id == 6) {
             session()->flash('textUpd', 'Reference Realisation mis à jour !');
         }
+        if ($id == 7) {
+            session()->flash('textUpd', 'Notre Showroom mis à jour !');
+        }
+        if ($id == 8) {
+            session()->flash('textUpd', 'Adresse Showroom mis à jour !');
+        }
+        if ($id == 9) {
+            session()->flash('textUpd', 'Horaire Showroom mis à jour !');
+        }
         
         return redirect()->route('site');
     }

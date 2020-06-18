@@ -84,6 +84,7 @@ class HomeController extends Controller
         $restauration = Realisation::find(5);
         $restauration_apres = Realisation::find(6);
         $map = Realisation::find(7);
+        $galerie = Realisation::find(8);
 
         $res["welcome"] = $welcome;
         $res["historique"]= $historique;
@@ -100,6 +101,9 @@ class HomeController extends Controller
         $res["douche_apres"] = $douche_apres;
         $res["restauration"] = $restauration;
         $res["restauration_apres"] = $restauration_apres;
+        $res["map"] = $map;
+        $res["galerie"] = $galerie;
+
         $res["references"] = $references;
         $res["showroom"] = $showroom;
         $res["adresse"] = $adresse;

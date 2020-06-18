@@ -182,6 +182,84 @@
     </div>
 </form>
 
+<form class="showroom box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['map']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Map</h3>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['map']->images as $map)
+                <tr>
+                    <td>{{ $map->title }}</td>
+                    <td>{{ $map->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $map->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
+<form class="showroom box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['galerie']->id) }}">
+    @csrf
+    <div style="margin-top: 100px" class="container">
+        <h3 style="background-color:white" class="card-header">Map</h3>
+        
+        <table style="background-color: white" class="table">
+            <thead>
+                <tr>
+                <th scope="col">Titre</th>
+                <th scope="col">Image</th>
+                <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            @foreach($res['galerie']->images as $galerie)
+                <tr>
+                    <td>{{ $galerie->title }}</td>
+                    <td>{{ $galerie->src }}</td>
+                    <td>
+                    <form action="{{route('realisation.delete', $galerie->id)}}" method="POST">
+                        @csrf
+                        <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
+                    </form>
+
+
+                    </td>
+
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
+        
+        
+        
+        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+    </div>
+</form>
+
 <form class="8 realisation box" style="display: none" method="POST" action="{{ route('realisation.upd', $res['salleDeBain']->id) }}">
     @csrf
     <div style="margin-top: 100px" class="container">
