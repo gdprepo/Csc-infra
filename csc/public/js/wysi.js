@@ -24,7 +24,7 @@ CKEDITOR.replace('editor5', {
 });
 
 CKEDITOR.replace('editor6', {
-  height: 400,
+  height: 100,
   baseFloatZIndex: 10005
 });
 

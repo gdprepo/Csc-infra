@@ -109,4 +109,12 @@ class TexteController extends Controller
         return redirect()->route('site');
 
     }
+
+    public function realisationadd(Request $request, $id)
+    {
+        $realisation = Realisation::find($id);
+
+        return view('dashboard.site.addImg');
+
+    }    
 }

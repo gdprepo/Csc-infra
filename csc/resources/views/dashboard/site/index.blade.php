@@ -160,6 +160,7 @@
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Salle De Bain</h3>
         <textarea cols="80" id="editor6" name="editor1" rows="10" data-sample-short>{!! $res['salleDeBain']->texte !!}</textarea>
+        <button style="width: 100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Enregistrer</button>
         
         <table style="background-color: white" class="table">
             <thead>
@@ -176,6 +177,7 @@
                     <td>{{ $salleDeBain->title }}</td>
                     <td>{{ $salleDeBain->src }}</td>
                     <td>
+
                     <form action="{{route('realisation.delete', $salleDeBain->id)}}" method="POST">
                         @csrf
                         <button style="width:100%" type="submit" class="btn btn-primary">Supprimer </button>
@@ -187,11 +189,14 @@
                 </tr>
             @endforeach
             </tbody>
+            
         </table>
         
+        <form action="{{route('realisation.add', $res['salleDeBain']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form>
         
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>
 

@@ -47,6 +47,8 @@ Route::post('/dashboard/site/realisation/upd/{id}', 'TexteController@updRealisat
 Route::post('/dashboard/site/document/delete/{id}', 'TexteController@documentdelete')->name('document.delete');
 Route::post('/dashboard/site/slider/delete/{id}', 'TexteController@sliderdelete')->name('slider.delete');
 Route::post('/dashboard/site/realisation/delete/{id}', 'TexteController@realisationdelete')->name('realisation.delete');
+Route::post('/dashboard/site/realisation/add/{id}', 'TexteController@realisationadd')->name('realisation.add');
+
 
 
 Route::post('/dashboard/client/add', 'UserController@createclient')->name('client.create');
