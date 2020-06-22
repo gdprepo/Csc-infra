@@ -48,7 +48,7 @@ Route::post('/dashboard/site/document/delete/{id}', 'TexteController@documentdel
 Route::post('/dashboard/site/slider/delete/{id}', 'TexteController@sliderdelete')->name('slider.delete');
 Route::post('/dashboard/site/realisation/delete/{id}', 'TexteController@realisationdelete')->name('realisation.delete');
 Route::post('/dashboard/site/realisation/add/{id}', 'TexteController@realisationadd')->name('realisation.add');
-
+Route::post('/dashboard/site/realisation/imageCreate/{id}', 'TexteController@storeImage')->name('realisation.storeImage');
 
 
 Route::post('/dashboard/client/add', 'UserController@createclient')->name('client.create');

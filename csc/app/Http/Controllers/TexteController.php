@@ -7,6 +7,7 @@ use App\Texte;
 use App\Document;
 use App\Slider;
 use App\Realisation;
+use App\Image;
 
 
 class TexteController extends Controller
@@ -100,7 +101,7 @@ class TexteController extends Controller
 
     public function realisationdelete(Request $request, $id)
     {
-        $realisation = Realisation::all()->images()->where('image_id', $id);
+        $realisation = Image::find($id);
 
         $realisation->delete();
 
@@ -114,7 +115,31 @@ class TexteController extends Controller
     {
         $realisation = Realisation::find($id);
 
-        return view('dashboard.site.addImg');
+        $res['realisation'] = $realisation;
 
-    }    
+        return view('dashboard.site.addImg', ['res' => $res]);
+
+    }
+    
+    public function storeImage(Request $request, $id)
+    {
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $file->move('images/gallerie', $file->getClientOriginalName());
+            $filename = "images/gallerie/" . $file->getClientOriginalName();
+            
+
+            $realisation = Realisation::find($id);
+            $image = new Image;
+
+            $image->title = "Image";
+            $image->src = $filename;
+            $image->save();
+
+            $realisation->images()->attach($image);
+        }
+
+        return redirect()->route('site');
+
+    }
 }
