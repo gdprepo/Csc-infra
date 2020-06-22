@@ -86,8 +86,8 @@
     </div>
 </form>
 
-<form class="showroom box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['map']->id) }}">
-    @csrf
+<div class="showroom box" style="display: none">
+
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Map</h3>
         
@@ -119,16 +119,18 @@
             </tbody>
         </table>
         
-        
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
-    </div>
-</form>
+        <form action="{{route('realisation.add', $res['map']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form> 
 
-<form class="showroom box" style="display: none" method="POST" action="{{ route('welcome.upd', $res['galerie']->id) }}">
-    @csrf
+    </div>
+</div>
+
+<div class="showroom box" style="display: none">
+
     <div style="margin-top: 100px" class="container">
-        <h3 style="background-color:white" class="card-header">Map</h3>
+        <h3 style="background-color:white" class="card-header">Galerie</h3>
         
         <table style="background-color: white" class="table">
             <thead>
@@ -158,11 +160,12 @@
             </tbody>
         </table>
         
-        
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+        <form action="{{route('realisation.add', $res['galerie']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form> 
     </div>
-</form>
+</div>
 
 
 

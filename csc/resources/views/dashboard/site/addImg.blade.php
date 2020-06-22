@@ -18,8 +18,13 @@
                 <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
             </div>
         </div> -->
-        <label for="file">Choisir une image</label>
-        <input type="file" name="file" \>
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input class="custom-file-input" type="file" name="file" aria-describedby="inputGroupFileAddon03"\>
+                <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+
+            </div>
+        </div>
 
         <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter l'Image</button>
 

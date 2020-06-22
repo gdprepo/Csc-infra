@@ -205,7 +205,8 @@
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Plomberie Realisation</h3>
         <textarea cols="80" id="editor7" name="editor1" rows="10" data-sample-short>{!! $res['plomberie_realisation']->texte !!}</textarea>
-        
+        <button style="width: 100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Enregistrer</button>
+
         <table style="background-color: white" class="table">
             <thead>
                 <tr>
@@ -233,10 +234,11 @@
             @endforeach
             </tbody>
         </table>
-        
-        
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+
+        <form action="{{route('realisation.add', $res['plomberie_realisation']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form>        
     </div>
 </form>
 
@@ -245,7 +247,8 @@
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Douche</h3>
         <textarea cols="80" id="editor8" name="editor1" rows="10" data-sample-short>{!! $res['douche']->texte !!}</textarea>
-        
+        <button style="width: 100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Enregistrer</button>
+
         <table style="background-color: white" class="table">
             <thead>
                 <tr>
@@ -274,9 +277,11 @@
             </tbody>
         </table>
         
+        <form action="{{route('realisation.add', $res['douche']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form> 
         
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>
 
@@ -313,9 +318,10 @@
             </tbody>
         </table>
         
-        
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
+        <form action="{{route('realisation.add', $res['douche_apres']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form> 
     </div>
 </form>
 
@@ -324,7 +330,8 @@
     <div style="margin-top: 100px" class="container">
         <h3 style="background-color:white" class="card-header">Restauration</h3>
         <textarea cols="80" id="editor9" name="editor1" rows="10" data-sample-short>{!! $res['restauration']->texte !!}</textarea>
-        
+        <button style="width: 100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Enregistrer</button>
+
         <table style="background-color: white" class="table">
             <thead>
                 <tr>
@@ -353,9 +360,11 @@
             </tbody>
         </table>
         
+        <form action="{{route('realisation.add', $res['restauration']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form> 
         
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>
 
@@ -392,9 +401,11 @@
             </tbody>
         </table>
         
+        <form action="{{route('realisation.add', $res['restauration_apres']->id)}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form> 
         
-        
-        <button style="width: 100%" type="submit" class="btn btn-primary">Enregistrer</button>
     </div>
 </form>
 
