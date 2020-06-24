@@ -63,8 +63,17 @@
 
 
     <style>
-      body{
-        background-color: grey;
+      body {
+          background: url("../images/tuyauterie_cover.jpg") no-repeat center center fixed;
+              -webkit-background-size: cover; /* pour Chrome et Safari */
+              -moz-background-size: cover; /* pour Firefox */
+              -o-background-size: cover; /* pour Opera */
+              background-size: cover; /* version standardisée */    
+          margin: 0px;
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
       }
 
       .content {

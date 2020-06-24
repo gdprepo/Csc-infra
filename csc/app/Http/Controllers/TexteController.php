@@ -99,6 +99,36 @@ class TexteController extends Controller
 
     }
 
+    public function slideradd()
+    {
+
+        return view('dashboard.site.addSlider');
+
+    }
+
+    public function storeSlider(Request $request)
+    {
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $file->move('slider', $file->getClientOriginalName());
+            $filename = "slider/" . $file->getClientOriginalName();
+            
+
+            $slider = new Slider;
+
+
+            $slider->title = "Slider";
+            $slider->paragraphe = "Pragraphe";
+            $slider->image = $filename;
+            $slider->save();
+    
+            session()->flash('textUpd', 'Slider ajouté !');
+        }
+
+        return redirect()->route('site');
+
+    }
+
     public function realisationdelete(Request $request, $id)
     {
         $realisation = Image::find($id);
@@ -135,9 +165,7 @@ class TexteController extends Controller
             $file->move('pdf', $file->getClientOriginalName());
             $filename = "pdf/" . $file->getClientOriginalName();
             
-
             $document = new Document;
-
 
             $document->title = "Document";
             $document->src = $filename;

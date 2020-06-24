@@ -157,6 +157,10 @@
             @endforeach
             </tbody>
         </table>
+        <a href="{{route('slider.add')}}">
+
+            <button style="width:100%; margin-bottom: 20px" class="btn btn-primary">Ajouter une image</button>
+        </a>
     </div>
 </div>
 

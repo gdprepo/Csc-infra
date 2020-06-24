@@ -135,7 +135,7 @@
                 @else
                     <div class="carousel-item" data-interval="5000">
                 @endif
-                        <img src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
+                        <img style="max-height: 580px" src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div style="background-color:#007bff87">
                                 <h5>{{ $slider->title }}</h5>
