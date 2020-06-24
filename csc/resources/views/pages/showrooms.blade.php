@@ -31,18 +31,18 @@
                 </div>
                 <br>
                 
-                <div style="background:rgba(255,255,255,0.8); width:960px; margin:auto; overflow:hidden;">
+                <div class="gallery" style="background:rgba(255,255,255,0.8); width:88%; margin:auto; overflow:hidden;">
                     <br>
                     @foreach ($res['map']->images as $map)
-                    <p style="text-align:center"><img src="{{ asset( $map->src ) }}"></p>
+                        <a href="{{ asset( $map->src )}}" data-lightbox="mygallery"><img style="margin-left: 25%; width:50%" src="{{ asset( $map->src ) }}"></a>
                     @endforeach			
                 </div>
                 <br><br>
                 
-                <div style="background:rgba(255,255,255,0.8); width:960px; margin:auto; overflow:hidden;">
+                <div class="gallery" style="background:rgba(255,255,255,0.8); width:960px; margin:auto; overflow:hidden;">
                 <br>
                     @foreach ($res['galerie']->images as $galerie)
-                    <img src="{{ asset( $galerie->src ) }}" alt="CSC Morandini - Plombier chauffagiste La Rochelle" style="float:left; margin-left:15px; margin-bottom:15px;">
+                    <a href="{{ asset( $galerie->src )}}" data-lightbox="mygallery"><img src="{{ asset( $galerie->src ) }}" alt="CSC Morandini - Plombier chauffagiste La Rochelle" style="float:left; margin-left:15px; margin-bottom:15px;"></a>
                     @endforeach
                     <br>
                 </div>

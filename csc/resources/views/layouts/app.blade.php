@@ -23,8 +23,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/image.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/lightbox.min.css') }}" rel="stylesheet">
 
-
+    <script type="text/javascript" src="{{ asset('js/lightbox-plus-jquery.min.js') }}"></script>
 
     <?php 
       $iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
@@ -47,7 +48,21 @@
         $page = $_SERVER['PHP_SELF'];
     ?>
 
-<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <style>
+        .gallery img {
+            width: 30%;
+            padding: 5px;
+            filter:grayscale(0%);
+            transition: 1s;
+        }
+
+        .gallery img:hover{
+            filter:grayscale(15%);
+            transform: scale(1.1);
+        }
+    </style>
+
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 </head>
 <body>
     <div id="app">
