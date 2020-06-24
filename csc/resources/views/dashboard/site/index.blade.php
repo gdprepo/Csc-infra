@@ -115,6 +115,11 @@
             @endforeach
             </tbody>
         </table>
+
+        <form action="{{route('document.add')}}" method="POST">
+            @csrf
+            <button style="width:100%; margin-bottom: 20px" type="submit" class="btn btn-primary">Ajouter une image</button>
+        </form>
     </div>
 </div>
 

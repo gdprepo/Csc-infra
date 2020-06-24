@@ -120,6 +120,35 @@ class TexteController extends Controller
         return view('dashboard.site.addImg', ['res' => $res]);
 
     }
+
+    public function documentadd(Request $request)
+    {
+
+        return view('dashboard.site.addDocument');
+
+    }
+
+    public function storeDocument(Request $request)
+    {
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
+            $file->move('pdf', $file->getClientOriginalName());
+            $filename = "pdf/" . $file->getClientOriginalName();
+            
+
+            $document = new Document;
+
+
+            $document->title = "Document";
+            $document->src = $filename;
+            $document->save();
+    
+            session()->flash('textUpd', 'Document ajouté !');
+        }
+
+        return redirect()->route('site');
+
+    }
     
     public function storeImage(Request $request, $id)
     {
@@ -137,6 +166,8 @@ class TexteController extends Controller
             $image->save();
 
             $realisation->images()->attach($image);
+
+            session()->flash('textUpd', 'Image ajouté !');
         }
 
         return redirect()->route('site');

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'CSC') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -19,6 +19,22 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <?php 
+      $iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
+      $iPhone  = stripos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+      $iPad    = stripos($_SERVER['HTTP_USER_AGENT'],"iPad");
+      $Android = stripos($_SERVER['HTTP_USER_AGENT'],"Android");
+      $webOS   = stripos($_SERVER['HTTP_USER_AGENT'],"webOS");
+    
+    ?>
+
+
+    <?php  if ($iPhone | $Android) { ?>
+      <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+    <?php  } ?>
+
+
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
