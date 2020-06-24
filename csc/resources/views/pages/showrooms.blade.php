@@ -42,7 +42,7 @@
                 <div class="gallery" style="background:rgba(255,255,255,0.8); width:960px; margin:auto; overflow:hidden;">
                 <br>
                     @foreach ($res['galerie']->images as $galerie)
-                    <a href="{{ asset( $galerie->src )}}" data-lightbox="mygallery"><img src="{{ asset( $galerie->src ) }}" alt="CSC Morandini - Plombier chauffagiste La Rochelle" style="float:left; margin-left:15px; margin-bottom:15px;"></a>
+                    <a href="{{ asset( $galerie->src )}}" data-lightbox="mygallery"><img height="200" src="{{ asset( $galerie->src ) }}" alt="CSC Morandini - Plombier chauffagiste La Rochelle" style="width: 30%;float:left; margin-left:15px; margin-bottom:15px;"></a>
                     @endforeach
                     <br>
                 </div>
