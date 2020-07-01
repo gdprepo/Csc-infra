@@ -34,7 +34,7 @@
                 <div class="gallery" style="background:rgba(255,255,255,0.8); width:88%; margin:auto; overflow:hidden;">
                     <br>
                     @foreach ($res['map']->images as $map)
-                        <a href="{{ asset( $map->src )}}" data-lightbox="mygallery"><img style="margin-left: 25%; width:50%" src="{{ asset( $map->src ) }}"></a>
+                        <a href="{{ asset( $map->src )}}" data-lightbox="mygallery"><img height="350px"  style="margin-left: 25%; width:50%; margin-bottom: 20px" src="{{ asset( $map->src ) }}"></a>
                     @endforeach			
                 </div>
                 <br><br>
