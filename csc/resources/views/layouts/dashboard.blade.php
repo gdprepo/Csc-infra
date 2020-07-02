@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'CSC') }}</title>
+    <title>CSC - Dashboard</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -33,8 +33,6 @@
     <?php  if ($iPhone | $Android) { ?>
       <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
     <?php  } ?>
-
-
 
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -64,7 +62,7 @@
 
     <style>
       body {
-          background: url("../images/tuyauterie_cover.jpg") no-repeat center center fixed;
+          background: url( "{{ asset('images/tuyauterie_cover.jpg') }}") no-repeat center center fixed;
               -webkit-background-size: cover; /* pour Chrome et Safari */
               -moz-background-size: cover; /* pour Firefox */
               -o-background-size: cover; /* pour Opera */

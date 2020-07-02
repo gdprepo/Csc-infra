@@ -3,7 +3,7 @@
 @section('content')
 
 <div class=" row">
-    <div style="padding-left:0" class="col-md-6">
+    <div style="padding-left:15px" class="col-md-6">
         <select id="globalstyleselect" class="custom-select custom-select-lg mb-3">
             <option selected>Choisir une page a modifier</option>
             <option value="showroom">Showroom</option>

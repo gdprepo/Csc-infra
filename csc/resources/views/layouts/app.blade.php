@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'CSC') }}</title>
+    <title>CSC</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,8 +24,24 @@
     <link href="{{ asset('css/image.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link href="{{ asset('css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+
 
     <script type="text/javascript" src="{{ asset('js/lightbox-plus-jquery.min.js') }}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+                $('nav').removeClass('white');
+            } else {
+                $('nav').removeClass('black');
+                $('nav').addClass('white');
+            }
+        })
+
+
+    </script>
 
     <?php 
       $iPod    = stripos($_SERVER['HTTP_USER_AGENT'],"iPod");
@@ -59,6 +75,30 @@
         .gallery img:hover{
             filter:grayscale(15%);
             transform: scale(1.1);
+        }
+
+        body{
+
+            margin: 0;
+            padding: 0;
+            font-family: arial;
+
+            animation: animate 16s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                background-image: url("../images/07.jpg");
+            }
+            25% {
+                background-image: url("../images/08.jpg");
+            }
+            60% {
+                background-image: url("../images/09.jpg");
+            }
+            75% {
+                background-image: url("../images/10.jpg");
+            }
         }
     </style>
 
@@ -98,37 +138,35 @@
 
     
         <?php  } else { ?>
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #36363685; height: 150px">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="nav collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="container navbar-nav mr-auto">
-                    <li class="nav-item btn_menu">
-                        <a class="nav-link active" href="{{ route('prestations') }}">Prestations <span class="sr-only">(current)</span><img src="{{asset('images/iconPrestation.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
+        <nav class="white">
+                <div class="logo">
+                    <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
+                </div>
+                <ul>
+                    <li>
+                        <a style="text-decoration: none;" href="{{ url('/') }}">Accueil</a>
                     </li>
-                    <li class="nav-item btn_menu">
-                        <a class="nav-link" href="{{ route('realisations') }}">Realisations <span class="sr-only">(current)</span><img src="{{asset('images/iconRealisation.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
+                    <li>
+                        <a style="text-decoration: none;" href="{{ route('prestations') }}">Prestations</a>
                     </li>
-                    <li style="z-index:1" class="nav-item logo">
-                        <a class="nav-link" href="{{ url('/') }}"><img style="width: 100%" src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
-                    </li>                    
-                    <li class="nav-item btn_menu">
-                        <a class="nav-link" href="{{ route('showrooms') }}">Showrooms <span class="sr-only">(current)</span><img src="{{asset('images/iconShowroom.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
+                    <li>
+                        <a style="text-decoration: none;" href="{{ route('realisations') }}">Realisations</a>
                     </li>
-                    <li class="nav-item btn_menu">
-                        <a class="nav-link" href="{{ route('contact') }}">Contact <span class="sr-only">(current)</span><img src="{{asset('images/iconContact.png')}}" style="height:60px;" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/></a>
+                    <li>
+                        <a style="text-decoration: none;" href="{{ route('showrooms') }}">Showrooms</a>
+                    </li>
+                    <li>
+                        <a style="text-decoration: none;" href="{{ route('contact') }}">Contact</a>
                     </li>
                 </ul>
-            </div>
+
         </nav>
         <?php  }?>
 
 
             @if ($page == "/index.php/login")
             @else
-            <div style="z-index: 0" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div style="z-index: 0; margin-top: 100px" id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                 @foreach ($res['sliders'] as $slider)
                     @if ($check == 0)
@@ -150,7 +188,7 @@
                 @else
                     <div class="carousel-item" data-interval="5000">
                 @endif
-                        <img style="max-height: 580px" src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
+                        <img style="height: 500px" src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div style="background-color:#007bff87">
                                 <h5>{{ $slider->title }}</h5>
@@ -190,7 +228,17 @@
         </footer>
     </div>
 
-    
+    <script type="text/javascript">
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('a');
+        const menuLength = menuItem.length;
+
+        for (let i = 0; i<menuLength; i++) {
+            if (menuItem[i].href === currentLocation) {
+                menuItem[i].className = "active";
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

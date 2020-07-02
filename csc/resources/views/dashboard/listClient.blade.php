@@ -1,5 +1,15 @@
 @extends('layouts.dashboard')
 
+<style>
+
+body{
+    background: url({{asset( 'images/tyauterie_cover.jpg' )}}) no-repeat center center fixed;
+}
+
+
+</style>
+
+
 @section('content')
 
 <div style="margin-top: 100px" class="container">

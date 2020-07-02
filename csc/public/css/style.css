@@ -1,5 +1,5 @@
 body {
-    background: url("../images/tuyauterie_cover.jpg") no-repeat center center fixed;
+    background: url("../images/07.jpg") no-repeat center center fixed;
         -webkit-background-size: cover; /* pour Chrome et Safari */
         -moz-background-size: cover; /* pour Firefox */
         -o-background-size: cover; /* pour Opera */
@@ -94,29 +94,6 @@ html, body {
 	border-style: solid; */
 }
 
-.logo{
-	background-color: rgba(255,255,255,0.9);
-	border-bottom-left-radius: 10px;
-		-webkit-border-radius-bottom-left: 10px;
-		-moz-border-radius-bottom-left: 10px;
-	border-bottom-right-radius: 10px;
-		-webkit-border-radius-bottom-right: 10px;
-		-moz-border-radius-bottom-right: 10px;
-	width: 23%;
-	height: 210px;
-	padding: 2%;
-	margin-right: 20px;
-    float: left;
-    margin-top: -40px;
-}
-
-#contenu {
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    background: rgba(255,255,255,0.8);
-
-}
 
 #contenu2{
 	width: 100%;
@@ -127,7 +104,7 @@ html, body {
 	width:88%;
 	margin:auto;
 	overflow: hidden;
-	background: rgba(255,255,255,0.8);
+	background: rgb(255, 255, 255);
 	/* padding-left: 25px;
 	padding-right: 25px; */
 }
