@@ -25,6 +25,7 @@
     <link href="{{ asset('css/contact.css') }}" rel="stylesheet">
     <link href="{{ asset('css/lightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
     <script type="text/javascript" src="{{ asset('js/lightbox-plus-jquery.min.js') }}"></script>
@@ -38,6 +39,12 @@
                 $('nav').removeClass('black');
                 $('nav').addClass('white');
             }
+        })
+
+        $(document).ready(function() {
+            $(".menu h4").click(function () {
+                $("nav ul").toggleClass("active")
+            })
         })
 
 
@@ -106,38 +113,16 @@
 </head>
 <body>
     <div id="app">
-        <?php  if ($iPhone | $Android) { ?>
-
-
-            <nav class="navbar  navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <div class="" id="">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                </ul>
-                </div>
-            </nav>
-
-
-
-
-
-
-
-
-
-
-
-    
-        <?php  } else { ?>
+        <div class="responsive-bar">
+            <div class="logo">
+                <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
+            </div>
+            <div class="menu">
+                <h4 style="margin: 5px">
+                    <i style="font-size:30px; color:white" class="fa">&#xf0c9;</i>
+                </h4>
+            </div>
+        </div>
         <nav class="white">
                 <div class="logo">
                     <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
@@ -161,7 +146,7 @@
                 </ul>
 
         </nav>
-        <?php  }?>
+
 
 
             @if ($page == "/index.php/login")
@@ -188,7 +173,7 @@
                 @else
                     <div class="carousel-item" data-interval="5000">
                 @endif
-                        <img style="height: 500px" src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
+                        <img class="imgSlider" src="{{asset( $slider->image )}}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div style="background-color:#007bff87">
                                 <h5>{{ $slider->title }}</h5>
