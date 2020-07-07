@@ -18,7 +18,7 @@
 					</article>
 				</div>
 
-				<div  class="col-md-6" style="margin-left: 10px">
+				<div class="col-md-6" style="margin-left: 10px">
 					<h3 style="text-align: left; background-color: blue; padding: 5px; color:white">Nos travaux de plomberie</h3>
 					<article style="background-color:white; padding: 10px">
 						{!! $res['plomberie']->texte !!}

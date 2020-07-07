@@ -115,7 +115,9 @@
     <div id="app">
         <div class="responsive-bar">
             <div class="logo">
-                <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
+                <a style="text-decoration: none;" href="{{ url('/') }}">
+                    <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
+                </a>
             </div>
             <div class="menu">
                 <h4 style="margin: 5px">
@@ -125,7 +127,9 @@
         </div>
         <nav class="white">
                 <div class="logo">
-                    <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
+                    <a style="text-decoration: none;" href="{{ url('/') }}">
+                        <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
+                    </a>
                 </div>
                 <ul>
                     <li>
