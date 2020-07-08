@@ -40,7 +40,7 @@
                     <div style="margin:5px" class="row">
                         @foreach ($res['douche']->images as $douche)
                         <div class="col-sm-4 gallery">		
-                            <a href="{{ asset( $douche->src )}}" data-lightbox="mygallery"><img height="300px"  src="{{ asset( $douche->src )}}" alt="{{$douche->title}}" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                            <a href="{{ asset( $douche->src )}}" data-lightbox="mygallery"><img class="imgRea" height="300px"  src="{{ asset( $douche->src )}}" alt="{{$douche->title}}" style="padding: 10px 10px 10px 0px; width: 100%"></a>
                         </div>
                         @endforeach
 
@@ -51,7 +51,7 @@
                     <div style="margin:5px" class="row">
                         @foreach ($res['douche_apres']->images as $douche_apres)
                         <div class="col-sm-6 gallery">		
-                            <a href="{{ asset( $douche_apres->src )}}" data-lightbox="mygallery"><img height="600px" src="{{ asset( $douche_apres->src )}}" alt="{{$douche_apres->title}}" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                            <a href="{{ asset( $douche_apres->src )}}" data-lightbox="mygallery"><img class="imgRea" height="600px" src="{{ asset( $douche_apres->src )}}" alt="{{$douche_apres->title}}" style="padding: 10px 10px 10px 0px; width: 100%"></a>
                         </div>
                         @endforeach
 
@@ -74,7 +74,7 @@
                     <div style="margin:5px" class="row">
                         @foreach ($res['restauration_apres']->images as $restauration_apres)
                         <div class="col-sm-3 gallery">		
-                            <a href="{{ asset( $restauration_apres->src )}}" data-lightbox="mygallery"><img height="300px" src="{{ asset( $restauration_apres->src )}}" alt="{{$restauration_apres->title}}" style="padding: 10px 10px 10px 0px; width: 100%"></a>
+                            <a href="{{ asset( $restauration_apres->src )}}" data-lightbox="mygallery"><img class="imgRea" height="300px" src="{{ asset( $restauration_apres->src )}}" alt="{{$restauration_apres->title}}" style="padding: 10px 10px 10px 0px; width: 100%"></a>
                         </div>
                         @endforeach
 

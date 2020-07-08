@@ -4,21 +4,23 @@
 
         <div class="container">
 
-            <div style="width: 85%; margin-left: 7% ;margin-bottom:50px; margin-top:50px; background-color:white; text-align: center;">
+            <div class="prestations" style="width: 85%; margin-left: 7% ;margin-bottom:50px; margin-top:50px; background-color:white; text-align: center;">
 				<br>
 				<h2 style="color: blue">Nos prestations</h2>
-				{!! $res['prestation']->texte !!}
+				<div>
+					{!! $res['prestation']->texte !!}
+				</div>
 			</div>
 
             <div class="row" style="width: 85%; margin-left: 7% ;margin-bottom:50px; text-align: center;">
-				<div class="col-md-6" style="margin-left: -10px">
+				<div class="col-md-6 travaux" style="margin-left: -10px">
 					<h3 style="text-align: left; background-color: blue; padding: 5px; color:white">Nos travaux de chauffage</h3>
 					<article style="background-color:white; padding: 10px">
 						{!! $res['chauffage']->texte !!}
 					</article>
 				</div>
 
-				<div class="col-md-6" style="margin-left: 10px">
+				<div class="col-md-6 travaux" style="margin-left: 10px">
 					<h3 style="text-align: left; background-color: blue; padding: 5px; color:white">Nos travaux de plomberie</h3>
 					<article style="background-color:white; padding: 10px">
 						{!! $res['plomberie']->texte !!}
