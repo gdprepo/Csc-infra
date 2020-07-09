@@ -6,27 +6,25 @@
 
         <div class="container" style="margin-bottom:100px; margin-top:50px">
 
-            <div style="width: 85%; margin-left: 7% ;margin-bottom:50px; margin-top:50px; background-color:white; text-align: center;">
+            <div class="contact" style="width: 85%; margin-left: 7% ;margin-bottom:50px; margin-top:50px; background-color:white; text-align: center;">
                 <br>
                 <h2 style="color: blue">Nous contacter</h2>
-                <br>
+                <div>
                     {!! $res['contact']->texte !!}
-                <br>
+                </div>
             </div>
             
             <div class="row" style="width: 88%; margin-left: 5.5% ;margin-bottom:50px; text-align: center;">
-                <div class="col-md-6">
-                    <h3 style="text-align: left; background-color: blue; padding: 5px; color:white">Nos coordonnées</h3>
-                    <article style="background-color:white; padding: 20px; height: 180px; max-height: 200px">
+                <div class="col-md-6 article">
+                    <h3 style="text-align: left; background-color: blue; padding: 15px; color:white">Nos coordonnées</h3>
+                    <article class="articleContact" style="background-color:white; padding: 20px;">
                         {!! $res['coordonees']->texte !!}
                     </article>
                 </div>
                 
-
-                
-                <div class="col-md-6">
-                    <h3 style="text-align: left; background-color: blue; padding: 5px; color:white">Notre zone d'intervention</h3>
-                    <article style="background-color:white; padding: 20px; height: 180px; max-height: 200px">
+                <div class="col-md-6 article">
+                    <h3 style="text-align: left; background-color: blue; padding: 15px; color:white">Notre zone d'intervention</h3>
+                    <article class="articleContact" style="background-color:white; padding: 20px;">
                         {!! $res['zone']->texte !!}
                     </article>
                 </div>

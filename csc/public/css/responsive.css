@@ -31,6 +31,21 @@ img {
     margin: 0px 20px;
 }
 
+.contact h2
+{
+    background: #007bff5c;
+    padding: 10px;
+    margin: 0px 10px;
+    margin-bottom: 15px;
+}
+
+.contact div p
+{
+    background: #09407b3b;
+    padding: 15px;
+    margin: 0px 20px;
+}
+
 .map
 {
     margin-top: -80px;
@@ -50,4 +65,15 @@ img {
 .imgRea
 {
     width: 50% !important;
+}
+
+.travaux article
+{
+    height: 300px !important;
+    max-height: 300px !important;
+}
+
+.article
+{
+    margin-bottom: 30px;
 }

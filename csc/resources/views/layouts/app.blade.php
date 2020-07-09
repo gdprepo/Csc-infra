@@ -59,7 +59,10 @@
     
     ?>
     <?php  if ($iPhone | $Android) { ?>
-      <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+    <?php  } else { ?>
+        <link href="{{ asset('css/styleContact.css') }}" rel="stylesheet">
+
     <?php  } ?>
 
     <?php
