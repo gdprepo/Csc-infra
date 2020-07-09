@@ -14,14 +14,14 @@
 
             <div class="row" style="width: 85%; margin-left: 7% ;margin-bottom:50px; text-align: center;">
 				<div class="col-md-6 travaux" style="margin-left: -10px">
-					<h3 style="text-align: left; background-color: blue; padding: 5px; color:white">Nos travaux de chauffage</h3>
+					<h3 style="text-align: left; background-color: blue; padding: 15px; color:white">Nos travaux de chauffage</h3>
 					<article style="background-color:white; padding: 10px">
 						{!! $res['chauffage']->texte !!}
 					</article>
 				</div>
 
 				<div class="col-md-6 travaux" style="margin-left: 10px">
-					<h3 style="text-align: left; background-color: blue; padding: 5px; color:white">Nos travaux de plomberie</h3>
+					<h3 style="text-align: left; background-color: blue; padding: 15px; color:white">Nos travaux de plomberie</h3>
 					<article style="background-color:white; padding: 10px">
 						{!! $res['plomberie']->texte !!}
 					</article>

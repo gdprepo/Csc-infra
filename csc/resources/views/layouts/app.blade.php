@@ -26,7 +26,10 @@
     <link href="{{ asset('css/lightbox.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/navbar.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
 
     <script type="text/javascript" src="{{ asset('js/lightbox-plus-jquery.min.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -131,10 +134,10 @@
         <nav class="white">
                 <div class="logo">
                     <a style="text-decoration: none;" href="{{ url('/') }}">
-                        <img src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
+                        <img class="animate__animated animate__bounceInLeft" src="{{asset('images/logo.png')}}" alt="CSC Morandini - Plombier chauffagiste La Rochelle"/>
                     </a>
                 </div>
-                <ul>
+                <ul class="">
                     <li>
                         <a style="text-decoration: none;" href="{{ url('/') }}">Accueil</a>
                     </li>
